@@ -1,18 +1,17 @@
 @echo off
 setlocal
 
-echo [!] Mister Assistant: One-Click Setup ^& Launch
-
+echo [!] Mister Assistant: One-Click Setup and Launch
 
 :: Check if .venv exists
 if not exist ".venv" (
-    echo 📦 Creating virtual environment...
+    echo [OK] Creating virtual environment...
     python -m venv .venv
-    echo ✅ Virtual environment created.
+    echo [OK] Virtual environment created.
 )
 
 :: Activate venv
-echo 🔌 Activating virtual environment...
+echo [OK] Activating virtual environment...
 call .venv\Scripts\activate
 
 :: Check for dependency changes
@@ -28,16 +27,15 @@ if exist "%REQ_HASH_FILE%" (
 )
 
 if "%NEW_HASH%" neq "%OLD_HASH%" (
-    echo 📥 Dependencies changed. Installing/Updating...
+    echo [OK] Dependencies changed. Installing/Updating...
     pip install -r %CURRENT_REQ_FILE%
     echo %NEW_HASH% > "%REQ_HASH_FILE%"
 ) else (
-    echo ✅ Dependencies up to date.
+    echo [OK] Dependencies up to date.
 )
 
 :: Run the project
-echo 🚀 Launching...
+echo [OK] Launching...
 python run.py
 
 pause
-

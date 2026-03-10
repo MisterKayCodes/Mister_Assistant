@@ -32,16 +32,18 @@ def check_file_integrity(file_path, folder_name, forbidden_rules, max_lines=200)
     forbidden = forbidden_rules.get(folder_name, [])
     
     for node in ast.walk(tree):
-        if isinstance(node, ast.Import):
-            for alias in node.names:
+        if isinstance(node, (ast.Import, ast.ImportFrom)):
+            names = []
+            if isinstance(node, ast.Import):
+                names = [alias.name for alias in node.names]
+            else:
+                if node.module:
+                    names = [node.module]
+            
+            for name in names:
                 for f in forbidden:
-                    if alias.name.startswith(f):
-                        errors.append(f"Illegal import: {alias.name}")
-        elif isinstance(node, ast.ImportFrom):
-            if node.module:
-                for f in forbidden:
-                    if node.module.startswith(f):
-                        errors.append(f"Illegal import: from {node.module} import ...")
+                    if name.startswith(f):
+                        errors.append(f"Illegal import: {name}")
     
     return errors
 
