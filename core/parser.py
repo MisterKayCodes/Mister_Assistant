@@ -26,7 +26,7 @@ class IntentEngine:
         "time": [
             r"what\s+is\s+the\s+time",
             r"time\s+check",
-            r"^time$"
+            r"time"
         ],
         "summary": [
             r"^summary$",
