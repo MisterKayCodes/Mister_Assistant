@@ -80,3 +80,32 @@ async def cmd_spent(message: types.Message):
 
     await repo.add_spending(data["amount"], data["category"])
     await message.answer(f"💸 Logged: ₦{data['amount']} -> **{data['category']}**.")
+
+@router.message(F.text.lower().startswith("summary"))
+@router.message(Command("summary"))
+async def cmd_summary(message: types.Message):
+    now = datetime.now()
+    activities = await repo.get_daily_activities(now)
+    spending = await repo.get_daily_spending(now)
+
+    if not activities and not spending:
+        await message.answer("Nothing logged for today yet, Boss.")
+        return
+
+    text = f"📊 **Daily Report: {now.strftime('%Y-%m-%d')}**\n\n"
+    
+    if activities:
+        text += "📝 **Activities:**\n"
+        for act in activities:
+            duration = "..."
+            if act.end_time:
+                duration = f"{ActivityBrain.calculate_duration(act.start_time, act.end_time)}m"
+            text += f"- {act.name}: {duration}\n"
+    
+    if spending:
+        total = sum(s.amount for s in spending)
+        text += f"\n💸 **Spending (Total: ₦{total}):**\n"
+        for s in spending:
+            text += f"- {s.category}: ₦{s.amount}\n"
+
+    await message.answer(text)

@@ -49,7 +49,7 @@ def scan_organism(base_dir=".", max_lines=200):
     has_issues = False
     layers = list(DEFAULT_FORBIDDEN_IMPORTS.keys())
     
-    print(f"🕵️ Scanning Organism at '{base_dir}'...")
+    print(f"[SCAN] Scanning Organism at '{base_dir}'...")
     
     for layer in layers:
         layer_path = os.path.join(base_dir, layer)
@@ -64,13 +64,13 @@ def scan_organism(base_dir=".", max_lines=200):
                     if file_errors:
                         has_issues = True
                         for err in file_errors:
-                            print(f"🚨 [ISSUE] {full_path}: {err}")
+                            print(f"[!] [ISSUE] {full_path}: {err}")
 
     if has_issues:
-        print("\n❌ Architecture is INFECTED. Follow the prompt.md and cut out the mutants.")
+        print("\n[X] Architecture is INFECTED. Follow the prompt.md and cut out the mutants.")
         return False
     else:
-        print("✅ Organism is HEALTHY. All layers are pure.")
+        print("[+] Organism is HEALTHY. All layers are pure.")
         return True
 
 if __name__ == "__main__":

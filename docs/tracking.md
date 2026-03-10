@@ -3,7 +3,7 @@
 | Task ID | Status | Started | Finished | Commit Message Preview |
 | :--- | :--- | :--- | :--- | :--- |
 | **Workflow Guardrails**| ✅ Done | 2026-03-10 | 2026-03-10 | `feat: setup architecture inspector and hot-reload run script` |
-| **MVP Finalization**| 🟠 In Progress| 2026-03-10 | - | `docs: finalize prompt.md and verification` |
+| **MVP Finalization**| ✅ Done | 2026-03-10 | 2026-03-10 | `feat: implement daily summary and finalize documentation` |
 
 
 

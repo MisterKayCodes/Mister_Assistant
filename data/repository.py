@@ -83,6 +83,32 @@ class Repository:
             return False
 
 
+    async def get_daily_activities(self, date: datetime) -> List[Activity]:
+        """Get all activities for a specific day."""
+        start_of_day = date.replace(hour=0, minute=0, second=0, microsecond=0)
+        end_of_day = date.replace(hour=23, minute=59, second=59, microsecond=999999)
+        async with self.session_factory() as session:
+            result = await session.execute(
+                select(Activity).where(
+                    Activity.start_time >= start_of_day,
+                    Activity.start_time <= end_of_day
+                )
+            )
+            return result.scalars().all()
+
+    async def get_daily_spending(self, date: datetime) -> List[Spending]:
+        """Get all spending for a specific day."""
+        start_of_day = date.replace(hour=0, minute=0, second=0, microsecond=0)
+        end_of_day = date.replace(hour=23, minute=59, second=59, microsecond=999999)
+        async with self.session_factory() as session:
+            result = await session.execute(
+                select(Spending).where(
+                    Spending.timestamp >= start_of_day,
+                    Spending.timestamp <= end_of_day
+                )
+            )
+            return result.scalars().all()
+
     async def is_vault_empty(self) -> bool:
         """Check if any user is registered (The Vault check)."""
         async with self.session_factory() as session:

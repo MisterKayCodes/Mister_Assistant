@@ -1,7 +1,8 @@
 @echo off
 setlocal
 
-echo 🛠️ Mister Assistant: One-Click Setup & Launch
+echo [!] Mister Assistant: One-Click Setup ^& Launch
+
 
 :: Check if .venv exists
 if not exist ".venv" (
