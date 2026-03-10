@@ -11,6 +11,7 @@
 | **Brain Cleanup**     | ✅ Done        | 2026-03-10 | 2026-03-10 | `fix: hardened NLU, implemented Test Pilot, and cleaned up brain mappings` | [implementation_plan.md](implementation_plan.md) |
 | **Git Automation** | ✅ Integrated | 2026-03-10 | 2026-03-10 | `feat: implement integrated watcher-based git sync` |
 | **Humanize & Harden**| ✅ Done | 2026-03-10 | 2026-03-10 | `feat: implement WAT support, personality engine, and watcher optimization` |
+| **NLU Tri-Core**| ✅ Done | 2026-03-10 | 2026-03-10 | `feat: upgraded NLU with local ML classifier, spaCy extraction, and active learning` |
 
 
 

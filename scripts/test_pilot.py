@@ -20,10 +20,16 @@ class TestPilot:
         ("Summary", "summary"),
         ("Cancel that", "cancel"),
         ("Random gibberish", "none"),
+        ("Spent 2000 on food", "spent"),
+        ("I spent 2000 naira on food", "spent"),
+        ("I spent 2000 naira", "spent"),
+        ("spent on dinner", "spent"),
+        ("Remind me to gym in 10 minutes", "future"),
+        ("Remind me to gym in 10 mins", "future"),
     ]
 
     async def run_diagnostics(self):
-        print("🚀 --- Mister Assistant: Test Pilot Diagnostics --- 🚀\n")
+        print("--- Mister Assistant: Test Pilot Diagnostics --- \n")
         passed = 0
         total = len(self.TEST_CASES)
 
@@ -35,7 +41,7 @@ class TestPilot:
             analysis = NLUEngine.analyze(phrase)
             actual_intent = custom if custom else analysis["intent"]
             
-            status = "✅ PASS" if actual_intent == expected_intent else "❌ FAIL"
+            status = "PASS" if actual_intent == expected_intent else "FAIL"
             if status == "✅ PASS": passed += 1
 
             print(f"[{status}] Input: '{phrase}'")

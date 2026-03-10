@@ -23,8 +23,9 @@ class NLUEngine:
     
     SPENDING_PATTERNS = [
         r"\b(spent|bought|purchased|cost|paid)\b",
-        r"spent\s+(\d+(?:\.\d+)?)\s+on\s+(.+)",
-        r"i\s+spent\s+(\d+(?:\.\d+)?)\s+on\s+(.+)"
+        r"\b(\d+(?:\.\d+)?)\s*(naira|usd|gbp|kes|ghs|cedis)?\b",
+        r"spent\s+(\d+(?:\.\d+)?)\s+(?:on\s+)?(.+)",
+        r"i\s+spent\s+(\d+(?:\.\d+)?)\s+(?:on\s+)?(.+)"
     ]
 
     TIME_PATTERNS = [
@@ -112,17 +113,35 @@ class NLUEngine:
         # 3. Extract Spending Entities
         amount = None
         category = None
-        if re.search(r"\bspent\b", text_lower):
-            # Try to match specific "spent X on Y"
-            spend_match = re.search(r"spent\s+(\d+(?:\.\d+)?)\s+on\s+(.+)", text_lower)
-            if spend_match:
-                amount = float(spend_match.group(1))
-                category = spend_match.group(2).strip().capitalize()
-            else:
-                # Just "spent X"
-                amount_match = re.search(r"spent\s+(\d+(?:\.\d+)?)", text_lower)
-                if amount_match:
-                    amount = float(amount_match.group(1))
+        
+        # Look for numbers first (likely amount)
+        amount_match = re.search(r"(\d+(?:\.\d+)?)", text_lower)
+        if amount_match:
+            amount = float(amount_match.group(1))
+            
+        # Refined spending extraction
+        if re.search(r"\b(spent|bought|purchased|paid)\b", text_lower):
+            # i spent 2000 naira on food -> food
+            # i spent 2000 on food -> food
+            # spent 2000 food -> food (ambiguous but better than nothing)
+            spend_patterns = [
+                r"spent\s+\d+(?:\.\d+)?\s*(?:naira|usd|gbp|kes|ghs|cedis)?\s*(?:on\s+)?(.+)",
+                r"bought\s+(.+)\s+(?:for|at)\s+\d+",
+                r"paid\s+\d+\s+for\s+(.+)"
+            ]
+            for p in spend_patterns:
+                m = re.search(p, text_lower)
+                if m:
+                    category = m.group(1).strip().capitalize()
+                    break
+            
+            # If still no category but we have amount and the sentence has more words
+            if not category and amount:
+                # Remove amount and intent words, see what's left
+                rem = text_lower.replace(str(int(amount)) if amount.is_integer() else str(amount), "")
+                rem = re.sub(r"\b(spent|bought|purchased|paid|i|on|naira|naira)\b", "", rem).strip()
+                if rem:
+                    category = rem.capitalize()
 
         return {
             "activity": activity.capitalize(),

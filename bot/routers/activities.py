@@ -4,7 +4,7 @@ from bot.states import BotStates
 import re
 from datetime import datetime
 
-from core.nlu import NLUEngine
+from services.nlu_service import nlu_service
 from core.personality import PersonalityEngine
 from core.time_utils import get_now, format_time, get_time_query_response
 from data.repository import repo
@@ -18,8 +18,8 @@ async def process_time_input(message: types.Message, state: FSMContext):
     activity = data.get("activity", "something productive")
     
     # Analyze the new message for time
-    analysis = NLUEngine.analyze(message.text)
-    target_time = analysis.get("target_time")
+    analysis = nlu_service.analyze(message.text)
+    target_time = analysis.target_time
     
     if not target_time:
         await message.answer(f"Boss, I still don't see a clear time in '{message.text}'. Try something like 'at 5pm' or 'in 20 mins'.")
@@ -64,53 +64,73 @@ async def wait_for_confirmation(message: types.Message, state: FSMContext):
     else:
         await message.answer("I need a 'yes' or 'no', Boss. Should I proceed?")
 
-@router.message()
-async def handle_message(message: types.Message, state: FSMContext):
-    try:
-        # LOG CONVERSATION (Learning Phase)
-        await repo.log_conversation(message.text, None)
+@router.message(lambda message: nlu_service.analyze(message.text).intent == "cancel")
+async def handle_cancel(message: types.Message, state: FSMContext):
+    num = scheduler.cancel_tasks(message.from_user.id)
+    await state.clear()
+    await message.answer(f"{PersonalityEngine.get_cancel_response()} (Cleared {num} reminders)")
 
-        # 0. Check Custom Mappings first
-        custom_intent = await repo.get_custom_intent(message.text)
-        
-        # 1. NLU Analysis
-        analysis = NLUEngine.analyze(message.text)
-        intent = custom_intent if custom_intent else analysis["intent"]
-        activity = analysis["activity"]
-        target_time = analysis["target_time"]
-        certainty = analysis.get("certainty", 1.0)
+@router.message(lambda message: nlu_service.analyze(message.text).intent == "future")
+async def handle_future(message: types.Message, state: FSMContext):
+    analysis = nlu_service.analyze(message.text)
+    activity = analysis.activity
+    target_time = analysis.target_time
+    
+    if not target_time:
+        await state.set_state(BotStates.waiting_for_time)
+        await state.update_data(activity=activity)
+        await message.answer(f"Boss, you said you'll **{activity}**, but **when**? I need a time (e.g., 'at 2pm' or 'in 10 mins').")
+        return
+    
+    await state.set_state(BotStates.waiting_for_confirmation)
+    await state.update_data(
+        action="schedule",
+        activity=activity,
+        target_time=target_time.isoformat()
+    )
+    await message.answer(f"🤔 Just to be sure, Boss: You want me to schedule **{activity}** for {format_time(target_time)}? (Yes/No)")
 
-        # 1.5 Ambiguity Check
-        if certainty < 0.5 and not custom_intent:
-            intent = "none"
+@router.message(lambda message: nlu_service.analyze(message.text).intent == "start_activity")
+async def handle_start(message: types.Message, state: FSMContext):
+    analysis = nlu_service.analyze(message.text)
+    activity = analysis.activity
+    active = await repo.get_active_activity()
+    
+    if active and active.name.lower() != activity.lower():
+        now = get_now()
+        duration = int((now - active.start_time).total_seconds() / 60)
+        await repo.end_activity(active.id, now, {})
+        await repo.start_activity(activity)
+        intro = PersonalityEngine.get_activity_response(active.name, duration)
+        await message.answer(f"{intro}\n\n⏱️ **Now tracking {activity}** from {format_time()}.")
+    elif not active:
+        await repo.start_activity(activity)
+        await message.answer(f"⏱️ Got it! Tracking **{activity}** from {format_time()}.")
+    else:
+        await message.answer(f"Already tracking **{activity}**, Boss!")
 
-        # 2. Intent Handling
-        elif intent == "time":
-            await message.answer(get_time_query_response())
-        elif intent == "present":
-            active = await repo.get_active_activity()
-            if active and active.name.lower() != activity.lower():
-                now = get_now()
-                duration = int((now - active.start_time).total_seconds() / 60)
-                await repo.end_activity(active.id, now, {})
-                await repo.start_activity(activity)
-                intro = PersonalityEngine.get_activity_response(active.name, duration)
-                await message.answer(f"{intro}\n\n⏱️ **Now tracking {activity}** from {format_time()}.")
-            elif not active:
-                await repo.start_activity(activity)
-                await message.answer(f"⏱️ Got it! Tracking **{activity}** from {format_time()}.")
-            else:
-                await message.answer(f"Already tracking **{activity}**, Boss!")
-        elif intent == "none":
-            # TRIGGER TEACH ME FLOW
-            await state.set_state(BotStates.waiting_for_teach_intent)
-            await state.update_data(phrase=message.text)
-            await message.answer(PersonalityEngine.get_teach_me_response(message.text))
-        else:
-            # Fallback for unexpected intents
-            await message.answer(PersonalityEngine.get_confused_response(message.text))
+@router.message(lambda message: nlu_service.analyze(message.text).intent == "end_activity")
+async def handle_stop(message: types.Message):
+    active = await repo.get_active_activity()
+    if not active:
+        await message.answer("Nothing is currently being tracked, Boss.")
+        return
+    now = get_now()
+    duration = int((now - active.start_time).total_seconds() / 60)
+    await repo.end_activity(active.id, now, {})
+    await message.answer(PersonalityEngine.get_activity_response(active.name, duration))
 
-    except Exception as e:
-        import traceback
-        print(f"[!] Router Error: {traceback.format_exc()}")
-        await message.answer(PersonalityEngine.get_error_response(str(e)))
+@router.message(lambda message: nlu_service.analyze(message.text).intent == "past")
+async def handle_past(message: types.Message):
+    analysis = nlu_service.analyze(message.text)
+    activity = analysis.activity
+    now = get_now()
+    start_time = now.replace(minute=now.minute - 30)
+    activity_obj = await repo.start_activity(activity)
+    activity_obj.start_time = start_time
+    await repo.end_activity(activity_obj.id, now, {"duration_minutes": 30})
+    await message.answer(f"✅ Logged **{activity}** as a 30m past session. I've got you covered!")
+
+@router.message(lambda message: nlu_service.analyze(message.text).intent == "time")
+async def handle_time(message: types.Message):
+    await message.answer(get_time_query_response())

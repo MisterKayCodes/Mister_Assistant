@@ -1,0 +1,1922 @@
+text,intent
+im done,end_activity
+got data for 50,log_spending
+wrapping up,end_activity
+spent 500 NGN on groceries,log_spending
+just paid ₦150 for bills,log_spending
+paid 45 bucks for bills,log_spending
+about to do some chores,start_activity
+gonna dinner,start_activity
+bought coffee for ₦500,log_spending
+just spent 200.50 for dinner,log_spending
+paid 1000 for data,log_spending
+spent 2.5knaira on gas,log_spending
+spent 5k NGN on uber,log_spending
+just spent 45 for bills,log_spending
+paid 2.5k for drinks,log_spending
+bought bills for ₦2.5k,log_spending
+paid 10000 bucks for bills,log_spending
+bought airtime for 1m naira,log_spending
+cost me 150 to get bills,log_spending
+paid 200.50 bucks for subscription,log_spending
+cost me 8000 to get lunch,log_spending
+just paid ₦200.50 for drinks,log_spending
+bought lunch for ₦5k,log_spending
+spent 1m NGN on coffee,log_spending
+bought gas for ₦5k,log_spending
+got lunch for 45,log_spending
+just spent 10000 for data,log_spending
+spent 500naira on data,log_spending
+spent 1mnaira on coffee,log_spending
+spent 1m NGN on data,log_spending
+cost me 5k to get airtime,log_spending
+spent 50naira on gas,log_spending
+moving to deep work,transition_activity
+paid 8000 for airtime,log_spending
+dropped 2.5k bucks on coffee,log_spending
+spent 500 NGN on coffee,log_spending
+cost me 200.50 to get dinner,log_spending
+paid 50 for food,log_spending
+spent 50naira on airtime,log_spending
+dropped 150 bucks on groceries,log_spending
+bought gas for 500 naira,log_spending
+im going to start meeting,start_activity
+bought gas for ₦45,log_spending
+spent 1mnaira on groceries,log_spending
+just spent 1m for dinner,log_spending
+cost me 200.50 to get data,log_spending
+spent 150 on gas,log_spending
+got uber for 8000,log_spending
+spent 10000naira on data,log_spending
+spent 45naira on gas,log_spending
+about to do some reading,start_activity
+paid 200.50 for dinner,log_spending
+time for gym,start_activity
+just spent 150 for uber,log_spending
+spent 2.5knaira on bills,log_spending
+bought lunch for ₦150,log_spending
+45 on drinks,log_spending
+bought groceries for 200.50 naira,log_spending
+switching to meditation,transition_activity
+got uber for 1m,log_spending
+got drinks for 50,log_spending
+spent 1000naira on lunch,log_spending
+im doing deep work now instead,transition_activity
+paid 150 for subscription,log_spending
+time for dinner,start_activity
+just paid ₦10000 for drinks,log_spending
+spent 2.5k NGN on lunch,log_spending
+bought coffee for 500 naira,log_spending
+changing to chores,transition_activity
+spent 1m NGN on dinner,log_spending
+got drinks for 10000,log_spending
+bought food for ₦5k,log_spending
+dropped 1000 bucks on groceries,log_spending
+just spent 8000 for groceries,log_spending
+im going to start chores,start_activity
+paid 1000 bucks for subscription,log_spending
+spent 45 on airtime,log_spending
+spent 500naira on lunch,log_spending
+bought dinner for 5k naira,log_spending
+cost me 10000 to get uber,log_spending
+5k on dinner,log_spending
+50 on drinks,log_spending
+just spent 45 for groceries,log_spending
+bought subscription for 200.50 naira,log_spending
+paid 2.5k bucks for lunch,log_spending
+just spent 1m for subscription,log_spending
+bought coffee for ₦45,log_spending
+paid 50 for airtime,log_spending
+just paid ₦500 for subscription,log_spending
+cost me 50 to get dinner,log_spending
+spent 150 on dinner,log_spending
+just spent 200.50 for bills,log_spending
+spent 200.50 on airtime,log_spending
+got dinner for 200.50,log_spending
+bought food for 8000 naira,log_spending
+paid 1000 for uber,log_spending
+spent 8000 NGN on subscription,log_spending
+spent 1000naira on gas,log_spending
+spent 45naira on airtime,log_spending
+2.5k on bills,log_spending
+spent 5k NGN on subscription,log_spending
+spent 10000 NGN on lunch,log_spending
+dropped 200.50 bucks on drinks,log_spending
+bought drinks for ₦50,log_spending
+spent 150 on coffee,log_spending
+cost me 500 to get subscription,log_spending
+500 on coffee,log_spending
+spent 1000 on data,log_spending
+dropped 1000 bucks on coffee,log_spending
+paid 200.50 bucks for data,log_spending
+10000 on uber,log_spending
+im going to start dinner,start_activity
+heading to meditation,start_activity
+spent 150naira on data,log_spending
+cost me 45 to get uber,log_spending
+5k on drinks,log_spending
+just paid ₦10000 for airtime,log_spending
+dropped 10000 bucks on coffee,log_spending
+bought food for 2.5k naira,log_spending
+just paid ₦1000 for lunch,log_spending
+just paid ₦1000 for gas,log_spending
+paid 8000 bucks for coffee,log_spending
+no,idle_chat
+switching to reading,transition_activity
+just paid ₦2.5k for food,log_spending
+paid 45 bucks for gas,log_spending
+spent 45 NGN on subscription,log_spending
+spent 1000 NGN on gas,log_spending
+bought uber for 50 naira,log_spending
+begin gym,start_activity
+bought gas for 200.50 naira,log_spending
+paid 45 for gas,log_spending
+paid 500 bucks for drinks,log_spending
+1m on data,log_spending
+bought bills for 1m naira,log_spending
+paid 8000 bucks for gas,log_spending
+8000 on airtime,log_spending
+spent 45 on data,log_spending
+spent 45naira on bills,log_spending
+8000 on groceries,log_spending
+spent 45naira on subscription,log_spending
+spent 2.5k NGN on data,log_spending
+paid 5k for lunch,log_spending
+45 on dinner,log_spending
+paid 5k bucks for bills,log_spending
+paid 1m for gas,log_spending
+spent 10000 on data,log_spending
+bought gas for 10000 naira,log_spending
+spent 1mnaira on gas,log_spending
+dropped 5k bucks on gas,log_spending
+got subscription for 1m,log_spending
+dropped 500 bucks on lunch,log_spending
+just paid ₦2.5k for subscription,log_spending
+cost me 5k to get subscription,log_spending
+spent 500 on uber,log_spending
+paid 150 bucks for dinner,log_spending
+spent 1mnaira on bills,log_spending
+spent 1m on groceries,log_spending
+spent 8000 on subscription,log_spending
+spent 1m on airtime,log_spending
+dropped 1m bucks on subscription,log_spending
+spent 45 on groceries,log_spending
+got uber for 10000,log_spending
+bought uber for 8000 naira,log_spending
+dropped 50 bucks on data,log_spending
+just paid ₦5k for airtime,log_spending
+just paid ₦150 for gas,log_spending
+bought subscription for 1000 naira,log_spending
+gonna meeting,start_activity
+2.5k on airtime,log_spending
+just paid ₦8000 for food,log_spending
+bought data for 1000 naira,log_spending
+paid 1000 for groceries,log_spending
+got airtime for 1000,log_spending
+heading to reading,start_activity
+got subscription for 50,log_spending
+just paid ₦5k for drinks,log_spending
+gonna lunch,start_activity
+dropped 45 bucks on uber,log_spending
+200.50 on bills,log_spending
+bought airtime for ₦500,log_spending
+shifting to meditation,transition_activity
+paid 200.50 bucks for lunch,log_spending
+bought food for ₦1000,log_spending
+just spent 1m for coffee,log_spending
+just spent 1000 for lunch,log_spending
+just spent 500 for subscription,log_spending
+just paid ₦200.50 for coffee,log_spending
+paid 10000 for bills,log_spending
+got dinner for 45,log_spending
+dropped 2.5k bucks on food,log_spending
+starting deep work,start_activity
+finished,end_activity
+spent 8000naira on airtime,log_spending
+paid 2.5k bucks for bills,log_spending
+moving to coding,transition_activity
+dropped 150 bucks on food,log_spending
+starting dinner,start_activity
+dropped 2.5k bucks on airtime,log_spending
+just spent 8000 for drinks,log_spending
+got data for 45,log_spending
+bought lunch for 2.5k naira,log_spending
+cost me 8000 to get gas,log_spending
+about to do some emails,start_activity
+I am tired,idle_chat
+spent 5k on bills,log_spending
+spent 150naira on dinner,log_spending
+got uber for 50,log_spending
+im going to start deep work,start_activity
+bought dinner for ₦200.50,log_spending
+paid 1m for bills,log_spending
+spent 10000naira on subscription,log_spending
+spent 2.5k on dinner,log_spending
+bought dinner for ₦45,log_spending
+200.50 on uber,log_spending
+cost me 200.50 to get bills,log_spending
+50 on lunch,log_spending
+dropped 200.50 bucks on data,log_spending
+paid 1m bucks for food,log_spending
+spent 150 on food,log_spending
+dropped 1000 bucks on bills,log_spending
+bought subscription for 1m naira,log_spending
+spent 8000naira on gas,log_spending
+bought uber for 150 naira,log_spending
+dropped 10000 bucks on gas,log_spending
+150 on data,log_spending
+just spent 10000 for airtime,log_spending
+just spent 10000 for subscription,log_spending
+just paid ₦10000 for lunch,log_spending
+5k on airtime,log_spending
+bought lunch for 1m naira,log_spending
+spent 200.50 NGN on coffee,log_spending
+dropped 150 bucks on subscription,log_spending
+spent 500naira on food,log_spending
+spent 10000naira on food,log_spending
+bought drinks for 8000 naira,log_spending
+dropped 2.5k bucks on subscription,log_spending
+just paid ₦10000 for bills,log_spending
+45 on data,log_spending
+200.50 on gas,log_spending
+gonna go do deep work now,transition_activity
+just spent 50 for bills,log_spending
+paid 45 for data,log_spending
+spent 500 NGN on food,log_spending
+just paid ₦500 for lunch,log_spending
+paid 200.50 for coffee,log_spending
+dropped 150 bucks on lunch,log_spending
+spent 10000 on drinks,log_spending
+paid 5k bucks for airtime,log_spending
+8000 on coffee,log_spending
+dropped 45 bucks on food,log_spending
+just paid ₦50 for lunch,log_spending
+got coffee for 50,log_spending
+just spent 45 for uber,log_spending
+cost me 500 to get lunch,log_spending
+just spent 200.50 for airtime,log_spending
+just paid ₦5k for dinner,log_spending
+heading to meeting,start_activity
+paid 5k for data,log_spending
+bought groceries for ₦5k,log_spending
+paid 45 bucks for subscription,log_spending
+just paid ₦150 for uber,log_spending
+just spent 150 for airtime,log_spending
+time for meditation,start_activity
+bought coffee for 2.5k naira,log_spending
+im doing gym now instead,transition_activity
+paid 500 for airtime,log_spending
+gonna go do emails now,transition_activity
+begin deep work,start_activity
+moving to emails,transition_activity
+paid 2.5k for gas,log_spending
+just paid ₦500 for coffee,log_spending
+paid 2.5k bucks for airtime,log_spending
+im going to start meditation,start_activity
+dropped 1000 bucks on gas,log_spending
+cost me 10000 to get bills,log_spending
+spent 500 NGN on data,log_spending
+spent 50 NGN on dinner,log_spending
+bought coffee for ₦1000,log_spending
+5k on bills,log_spending
+paid 50 bucks for groceries,log_spending
+bought coffee for 200.50 naira,log_spending
+bought lunch for ₦45,log_spending
+just paid ₦1000 for food,log_spending
+bought food for ₦8000,log_spending
+spent 45 NGN on groceries,log_spending
+bought subscription for ₦200.50,log_spending
+got dinner for 50,log_spending
+cost me 150 to get data,log_spending
+changing to gym,transition_activity
+just spent 10000 for food,log_spending
+spent 1mnaira on dinner,log_spending
+2.5k on coffee,log_spending
+spent 5k NGN on airtime,log_spending
+cost me 5k to get data,log_spending
+spent 1000 on food,log_spending
+bought data for ₦10000,log_spending
+dropped 500 bucks on dinner,log_spending
+daily summary,get_summary
+cost me 150 to get drinks,log_spending
+bought food for ₦2.5k,log_spending
+bought airtime for ₦50,log_spending
+spent 2.5k NGN on drinks,log_spending
+spent 50naira on bills,log_spending
+spent 45 NGN on uber,log_spending
+just paid ₦200.50 for groceries,log_spending
+just paid ₦2.5k for data,log_spending
+paid 1m for drinks,log_spending
+just paid ₦1m for drinks,log_spending
+spent 1m NGN on airtime,log_spending
+paid 2.5k bucks for subscription,log_spending
+dropped 1000 bucks on food,log_spending
+just paid ₦150 for dinner,log_spending
+paid 1000 bucks for airtime,log_spending
+10000 on data,log_spending
+shifting to driving,transition_activity
+bought groceries for ₦200.50,log_spending
+dropped 10000 bucks on food,log_spending
+dropped 150 bucks on bills,log_spending
+spent 1m NGN on uber,log_spending
+paid 45 bucks for coffee,log_spending
+paid 2.5k for subscription,log_spending
+paid 200.50 bucks for airtime,log_spending
+cost me 2.5k to get subscription,log_spending
+just paid ₦10000 for dinner,log_spending
+spent 10000 NGN on airtime,log_spending
+gonna coding,start_activity
+bought food for ₦45,log_spending
+bought dinner for 1m naira,log_spending
+just spent 8000 for airtime,log_spending
+paid 1000 for bills,log_spending
+bought data for ₦2.5k,log_spending
+just spent 200.50 for data,log_spending
+2.5k on subscription,log_spending
+paid 50 bucks for gas,log_spending
+1000 on food,log_spending
+spent 8000naira on data,log_spending
+1000 on airtime,log_spending
+dropped 10000 bucks on data,log_spending
+now meeting,transition_activity
+paid 5k for food,log_spending
+just paid ₦45 for lunch,log_spending
+got lunch for 8000,log_spending
+got bills for 2.5k,log_spending
+got dinner for 1m,log_spending
+spent 1m NGN on gas,log_spending
+just paid ₦1000 for data,log_spending
+just paid ₦200.50 for airtime,log_spending
+dropped 2.5k bucks on drinks,log_spending
+paid 200.50 bucks for drinks,log_spending
+spent 50naira on uber,log_spending
+spent 1m NGN on bills,log_spending
+about to do some lunch,start_activity
+spent 45naira on coffee,log_spending
+spent 2.5knaira on data,log_spending
+bought coffee for 10000 naira,log_spending
+just paid ₦2.5k for uber,log_spending
+cost me 1m to get uber,log_spending
+just spent 500 for groceries,log_spending
+switching to workout,transition_activity
+paid 10000 bucks for lunch,log_spending
+bought uber for 500 naira,log_spending
+paid 5k bucks for lunch,log_spending
+got food for 45,log_spending
+bought food for ₦500,log_spending
+dropped 5k bucks on uber,log_spending
+dropped 1000 bucks on drinks,log_spending
+changing to meeting,transition_activity
+spent 45 on dinner,log_spending
+spent 1m on gas,log_spending
+bought drinks for ₦150,log_spending
+paid 8000 bucks for dinner,log_spending
+paid 45 bucks for groceries,log_spending
+got coffee for 200.50,log_spending
+paid 2.5k bucks for gas,log_spending
+just finished,end_activity
+bought food for ₦150,log_spending
+spent 200.50 on data,log_spending
+just spent 200.50 for subscription,log_spending
+dropped 200.50 bucks on lunch,log_spending
+cost me 5k to get drinks,log_spending
+dropped 500 bucks on bills,log_spending
+dropped 1m bucks on bills,log_spending
+paid 45 for drinks,log_spending
+cost me 8000 to get subscription,log_spending
+spent 2.5k NGN on coffee,log_spending
+spent 150 NGN on data,log_spending
+cost me 500 to get gas,log_spending
+spent 10000 on subscription,log_spending
+spent 5k on uber,log_spending
+spent 8000 on bills,log_spending
+just paid ₦45 for airtime,log_spending
+spent 1000 NGN on coffee,log_spending
+spent 1mnaira on airtime,log_spending
+now driving,transition_activity
+just spent 8000 for bills,log_spending
+got food for 150,log_spending
+spent 2.5knaira on coffee,log_spending
+dropped 45 bucks on groceries,log_spending
+got food for 1m,log_spending
+im going to start reading,start_activity
+got bills for 5k,log_spending
+spent 2.5k NGN on groceries,log_spending
+spent 200.50 on lunch,log_spending
+just spent 10000 for gas,log_spending
+bought subscription for 50 naira,log_spending
+2.5k on lunch,log_spending
+spent 10000 on food,log_spending
+50 on data,log_spending
+bought dinner for ₦8000,log_spending
+just spent 1000 for drinks,log_spending
+start gym,start_activity
+bought drinks for 150 naira,log_spending
+cost me 2.5k to get airtime,log_spending
+lol,idle_chat
+spent 500naira on dinner,log_spending
+spent 8000 on coffee,log_spending
+gonna deep work,start_activity
+about to do some dinner,start_activity
+bought subscription for ₦150,log_spending
+just paid ₦1000 for dinner,log_spending
+dropped 8000 bucks on lunch,log_spending
+bought gas for 1000 naira,log_spending
+just paid ₦200.50 for dinner,log_spending
+spent 45 on uber,log_spending
+paid 500 bucks for uber,log_spending
+paid 2.5k for bills,log_spending
+cost me 8000 to get groceries,log_spending
+bought drinks for 50 naira,log_spending
+got groceries for 8000,log_spending
+paid 10000 for gas,log_spending
+spent 200.50 NGN on food,log_spending
+just paid ₦1m for bills,log_spending
+just paid ₦1000 for uber,log_spending
+just paid ₦5k for gas,log_spending
+just paid ₦50 for coffee,log_spending
+spent 150naira on groceries,log_spending
+bought subscription for ₦1m,log_spending
+spent 500naira on bills,log_spending
+give me a report,get_summary
+bought lunch for 500 naira,log_spending
+spent 10000naira on dinner,log_spending
+paid 1m for data,log_spending
+bought groceries for 5k naira,log_spending
+bought gas for 45 naira,log_spending
+gonna chores,start_activity
+bought drinks for ₦10000,log_spending
+bought data for 45 naira,log_spending
+got subscription for 1000,log_spending
+bought food for 500 naira,log_spending
+about to do some meeting,start_activity
+spent 200.50 NGN on uber,log_spending
+spent 500 NGN on subscription,log_spending
+just spent 1000 for groceries,log_spending
+spent 45naira on dinner,log_spending
+got airtime for 1m,log_spending
+now gym,transition_activity
+bought coffee for 1000 naira,log_spending
+just spent 8000 for lunch,log_spending
+just paid ₦500 for food,log_spending
+spent 200.50 on subscription,log_spending
+just paid ₦50 for airtime,log_spending
+spent 50 on bills,log_spending
+heading to workout,start_activity
+bought food for ₦50,log_spending
+paid 45 for uber,log_spending
+paid 500 bucks for lunch,log_spending
+bought data for ₦1000,log_spending
+just paid ₦50 for dinner,log_spending
+spent 200.50 NGN on data,log_spending
+all done,end_activity
+bought subscription for ₦2.5k,log_spending
+paid 150 for food,log_spending
+just spent 1000 for food,log_spending
+just spent 200.50 for food,log_spending
+got groceries for 1m,log_spending
+just spent 10000 for uber,log_spending
+10000 on subscription,log_spending
+spent 500 on dinner,log_spending
+im doing workout now instead,transition_activity
+just spent 2.5k for gas,log_spending
+bought gas for 50 naira,log_spending
+dropped 200.50 bucks on groceries,log_spending
+got coffee for 8000,log_spending
+got drinks for 1000,log_spending
+paid 50 bucks for lunch,log_spending
+bought data for 10000 naira,log_spending
+paid 8000 bucks for groceries,log_spending
+paid 8000 for subscription,log_spending
+bought groceries for 45 naira,log_spending
+paid 500 for subscription,log_spending
+paid 200.50 for uber,log_spending
+dropped 8000 bucks on uber,log_spending
+spent 1m on data,log_spending
+just paid ₦200.50 for gas,log_spending
+got coffee for 1m,log_spending
+spent 45 NGN on lunch,log_spending
+just spent 2.5k for lunch,log_spending
+bought gas for ₦10000,log_spending
+paid 10000 for lunch,log_spending
+1m on uber,log_spending
+paid 5k for subscription,log_spending
+dropped 2.5k bucks on lunch,log_spending
+5k on data,log_spending
+just paid ₦45 for gas,log_spending
+bought dinner for ₦150,log_spending
+bought gas for ₦200.50,log_spending
+spent 200.50naira on drinks,log_spending
+spent 50naira on dinner,log_spending
+just spent 50 for dinner,log_spending
+got bills for 150,log_spending
+spent 5k NGN on coffee,log_spending
+just spent 200.50 for uber,log_spending
+got groceries for 45,log_spending
+bought gas for ₦1000,log_spending
+im going to start coding,start_activity
+paid 1000 bucks for data,log_spending
+paid 200.50 bucks for dinner,log_spending
+spent 45 on gas,log_spending
+got coffee for 150,log_spending
+dropped 8000 bucks on airtime,log_spending
+got food for 1000,log_spending
+just paid ₦10000 for food,log_spending
+spent 50 NGN on drinks,log_spending
+spent 150naira on lunch,log_spending
+10000 on lunch,log_spending
+just spent 45 for coffee,log_spending
+paid 8000 for bills,log_spending
+spent 200.50naira on data,log_spending
+just paid ₦8000 for data,log_spending
+shifting to deep work,transition_activity
+/summary,get_summary
+spent 200.50 NGN on airtime,log_spending
+paid 1m bucks for data,log_spending
+spent 50 on gas,log_spending
+bought uber for 200.50 naira,log_spending
+just spent 10000 for bills,log_spending
+moving to meditation,transition_activity
+spent 5k on food,log_spending
+spent 1mnaira on uber,log_spending
+got food for 500,log_spending
+paid 1m for lunch,log_spending
+just spent 5k for data,log_spending
+paid 50 bucks for dinner,log_spending
+spent 10000 NGN on drinks,log_spending
+paid 50 for subscription,log_spending
+spent 200.50naira on lunch,log_spending
+paid 5k for bills,log_spending
+just paid ₦5k for coffee,log_spending
+bought lunch for 5k naira,log_spending
+dropped 200.50 bucks on dinner,log_spending
+spent 50 on data,log_spending
+paid 150 for uber,log_spending
+spent 1000 on dinner,log_spending
+bought bills for 1000 naira,log_spending
+bought uber for ₦1m,log_spending
+paid 200.50 for gas,log_spending
+spent 1m on food,log_spending
+show me my summary,get_summary
+cost me 45 to get airtime,log_spending
+just spent 1000 for uber,log_spending
+got gas for 2.5k,log_spending
+cost me 50 to get coffee,log_spending
+spent 5knaira on uber,log_spending
+bought airtime for ₦1m,log_spending
+150 on uber,log_spending
+spent 50 on airtime,log_spending
+500 on airtime,log_spending
+spent 200.50 NGN on bills,log_spending
+spent 10000naira on uber,log_spending
+cost me 2.5k to get groceries,log_spending
+got lunch for 10000,log_spending
+bought uber for 5k naira,log_spending
+cost me 1m to get bills,log_spending
+cost me 45 to get lunch,log_spending
+spent 10000naira on drinks,log_spending
+spent 150naira on drinks,log_spending
+bought gas for 150 naira,log_spending
+bought dinner for 8000 naira,log_spending
+spent 2.5k NGN on subscription,log_spending
+spent 1mnaira on food,log_spending
+gonna driving,start_activity
+just paid ₦50 for subscription,log_spending
+dropped 200.50 bucks on coffee,log_spending
+just paid ₦2.5k for bills,log_spending
+bought groceries for 1000 naira,log_spending
+shifting to gym,transition_activity
+spent 200.50 on bills,log_spending
+cost me 8000 to get food,log_spending
+just paid ₦1000 for coffee,log_spending
+paid 500 for dinner,log_spending
+bought uber for ₦8000,log_spending
+just paid ₦45 for dinner,log_spending
+changing to driving,transition_activity
+paid 1000 for food,log_spending
+cost me 10000 to get subscription,log_spending
+1m on drinks,log_spending
+spent 1000 NGN on dinner,log_spending
+10000 on food,log_spending
+paid 5k bucks for gas,log_spending
+dropped 1000 bucks on uber,log_spending
+just spent 5k for subscription,log_spending
+got dinner for 8000,log_spending
+cost me 50 to get subscription,log_spending
+spent 200.50naira on dinner,log_spending
+8000 on data,log_spending
+just paid ₦1m for food,log_spending
+50 on food,log_spending
+50 on dinner,log_spending
+just paid ₦8000 for gas,log_spending
+spent 500 on lunch,log_spending
+200.50 on subscription,log_spending
+2.5k on food,log_spending
+paid 5k bucks for subscription,log_spending
+bought bills for ₦5k,log_spending
+dropped 50 bucks on uber,log_spending
+paid 150 for groceries,log_spending
+paid 200.50 bucks for groceries,log_spending
+gonna go do gym now,transition_activity
+cost me 2.5k to get drinks,log_spending
+1000 on coffee,log_spending
+paid 500 for bills,log_spending
+got drinks for 150,log_spending
+just paid ₦50 for gas,log_spending
+spent 150naira on bills,log_spending
+paid 50 for drinks,log_spending
+just paid ₦1m for lunch,log_spending
+paid 150 for coffee,log_spending
+50 on subscription,log_spending
+10000 on drinks,log_spending
+spent 10000 on groceries,log_spending
+paid 1m for subscription,log_spending
+just paid ₦200.50 for data,log_spending
+just spent 150 for subscription,log_spending
+paid 45 bucks for drinks,log_spending
+im doing reading now instead,transition_activity
+spent 8000 on drinks,log_spending
+paid 8000 bucks for bills,log_spending
+5k on gas,log_spending
+bought lunch for ₦8000,log_spending
+just spent 5k for food,log_spending
+just paid ₦200.50 for bills,log_spending
+paid 2.5k bucks for dinner,log_spending
+50 on airtime,log_spending
+paid 10000 bucks for airtime,log_spending
+dropped 10000 bucks on drinks,log_spending
+spent 500 NGN on drinks,log_spending
+starting meditation,start_activity
+cost me 1000 to get subscription,log_spending
+cost me 5k to get gas,log_spending
+got data for 150,log_spending
+45 on subscription,log_spending
+1m on groceries,log_spending
+dropped 150 bucks on dinner,log_spending
+spent 150naira on coffee,log_spending
+150 on gas,log_spending
+got gas for 45,log_spending
+now lunch,transition_activity
+paid 5k for uber,log_spending
+150 on drinks,log_spending
+just spent 1m for bills,log_spending
+bought groceries for ₦1000,log_spending
+2.5k on drinks,log_spending
+spent 5k NGN on groceries,log_spending
+spent 5knaira on dinner,log_spending
+got lunch for 150,log_spending
+spent 1000naira on bills,log_spending
+paid 500 for uber,log_spending
+cost me 50 to get uber,log_spending
+paid 500 bucks for coffee,log_spending
+just spent 50 for data,log_spending
+switching to chores,transition_activity
+1000 on bills,log_spending
+cost me 1m to get dinner,log_spending
+gonna gym,start_activity
+paid 200.50 for drinks,log_spending
+spent 2.5knaira on uber,log_spending
+dropped 500 bucks on drinks,log_spending
+paid 1000 for subscription,log_spending
+paid 5k bucks for groceries,log_spending
+spent 10000 on uber,log_spending
+spent 50 on drinks,log_spending
+about to do some driving,start_activity
+just spent 2.5k for bills,log_spending
+just paid ₦45 for data,log_spending
+spent 8000 NGN on uber,log_spending
+spent 2.5k on uber,log_spending
+dropped 2.5k bucks on data,log_spending
+bought food for 200.50 naira,log_spending
+dropped 5k bucks on data,log_spending
+spent 200.50naira on subscription,log_spending
+bought bills for ₦500,log_spending
+bought groceries for ₦10000,log_spending
+got subscription for 45,log_spending
+paid 45 for food,log_spending
+paid 150 for airtime,log_spending
+cost me 200.50 to get groceries,log_spending
+got data for 5k,log_spending
+got uber for 5k,log_spending
+bought uber for ₦10000,log_spending
+just spent 200.50 for gas,log_spending
+spent 8000naira on subscription,log_spending
+500 on groceries,log_spending
+bought subscription for 2.5k naira,log_spending
+gonna go do reading now,transition_activity
+moving to gym,transition_activity
+spent 2.5knaira on lunch,log_spending
+got drinks for 500,log_spending
+spent 1000naira on coffee,log_spending
+spent 8000 on groceries,log_spending
+cost me 5k to get food,log_spending
+spent 2.5knaira on dinner,log_spending
+10000 on coffee,log_spending
+bought bills for ₦200.50,log_spending
+paid 500 bucks for groceries,log_spending
+spent 1000 on drinks,log_spending
+paid 10000 bucks for uber,log_spending
+spent 8000naira on groceries,log_spending
+spent 500 on gas,log_spending
+150 on airtime,log_spending
+bought drinks for ₦1000,log_spending
+cost me 500 to get groceries,log_spending
+im doing emails now instead,transition_activity
+just spent 200.50 for groceries,log_spending
+1000 on groceries,log_spending
+gonna go do meeting now,transition_activity
+dropped 5k bucks on drinks,log_spending
+2.5k on data,log_spending
+bought subscription for 8000 naira,log_spending
+just paid ₦150 for lunch,log_spending
+starting reading,start_activity
+just paid ₦45 for bills,log_spending
+cost me 500 to get bills,log_spending
+paid 45 for lunch,log_spending
+spent 10000naira on coffee,log_spending
+paid 1000 bucks for coffee,log_spending
+bought uber for 2.5k naira,log_spending
+dropped 8000 bucks on subscription,log_spending
+1m on gas,log_spending
+bought lunch for 150 naira,log_spending
+200.50 on data,log_spending
+spent 8000 on dinner,log_spending
+paid 1000 bucks for gas,log_spending
+bought drinks for ₦1m,log_spending
+dropped 1000 bucks on subscription,log_spending
+just paid ₦8000 for bills,log_spending
+bought subscription for 500 naira,log_spending
+paid 50 for groceries,log_spending
+paid 8000 for dinner,log_spending
+bought subscription for ₦1000,log_spending
+just spent 500 for data,log_spending
+got dinner for 2.5k,log_spending
+cost me 2.5k to get uber,log_spending
+dropped 45 bucks on data,log_spending
+bought lunch for 1000 naira,log_spending
+moving to lunch,transition_activity
+just spent 45 for gas,log_spending
+spent 200.50naira on groceries,log_spending
+spent 150 NGN on food,log_spending
+just spent 1000 for airtime,log_spending
+gonna meditation,start_activity
+just spent 1m for lunch,log_spending
+spent 50 NGN on airtime,log_spending
+changing to deep work,transition_activity
+im going to start workout,start_activity
+spent 1000naira on drinks,log_spending
+spent 500naira on uber,log_spending
+spent 50naira on lunch,log_spending
+500 on data,log_spending
+dropped 150 bucks on gas,log_spending
+spent 150 NGN on lunch,log_spending
+spent 150naira on uber,log_spending
+just spent 10000 for lunch,log_spending
+paid 150 for bills,log_spending
+just paid ₦5k for uber,log_spending
+im doing chores now instead,transition_activity
+im finished,end_activity
+bought groceries for ₦8000,log_spending
+paid 1m bucks for bills,log_spending
+spent 5knaira on lunch,log_spending
+cost me 2.5k to get data,log_spending
+got coffee for 2.5k,log_spending
+got data for 1m,log_spending
+got bills for 1m,log_spending
+time for lunch,start_activity
+cost me 200.50 to get coffee,log_spending
+150 on dinner,log_spending
+spent 5k on gas,log_spending
+dropped 50 bucks on bills,log_spending
+bought food for 1000 naira,log_spending
+just paid ₦150 for groceries,log_spending
+paid 10000 bucks for dinner,log_spending
+bought lunch for 200.50 naira,log_spending
+dropped 45 bucks on subscription,log_spending
+report,get_summary
+dropped 50 bucks on drinks,log_spending
+moving to chores,transition_activity
+paid 150 for gas,log_spending
+cost me 500 to get food,log_spending
+bought groceries for ₦2.5k,log_spending
+just spent 50 for coffee,log_spending
+spent 5k on groceries,log_spending
+heading to deep work,start_activity
+just spent 150 for data,log_spending
+begin workout,start_activity
+just spent 1m for airtime,log_spending
+spent 1m on subscription,log_spending
+just paid ₦150 for subscription,log_spending
+spent 500 on bills,log_spending
+spent 1000 on gas,log_spending
+cost me 200.50 to get subscription,log_spending
+paid 1000 for gas,log_spending
+about to do some gym,start_activity
+cost me 45 to get food,log_spending
+got lunch for 1m,log_spending
+spent 1mnaira on data,log_spending
+just spent 8000 for coffee,log_spending
+spent 500naira on subscription,log_spending
+bought data for ₦45,log_spending
+cost me 50 to get lunch,log_spending
+cost me 2.5k to get bills,log_spending
+im doing lunch now instead,transition_activity
+now chores,transition_activity
+got bills for 200.50,log_spending
+spent 1000 NGN on drinks,log_spending
+dropped 1m bucks on dinner,log_spending
+bought coffee for ₦1m,log_spending
+dropped 200.50 bucks on food,log_spending
+got data for 1000,log_spending
+bought food for 150 naira,log_spending
+dropped 500 bucks on coffee,log_spending
+paid 8000 bucks for airtime,log_spending
+just paid ₦5k for groceries,log_spending
+just spent 200.50 for coffee,log_spending
+got drinks for 1m,log_spending
+bought drinks for 200.50 naira,log_spending
+spent 200.50naira on food,log_spending
+bought bills for 8000 naira,log_spending
+spent 150 NGN on airtime,log_spending
+paid 5k bucks for data,log_spending
+spent 5k NGN on lunch,log_spending
+cost me 150 to get gas,log_spending
+spent 1000 NGN on data,log_spending
+spent 150 NGN on bills,log_spending
+spent 1m on uber,log_spending
+gonna go do coding now,transition_activity
+paid 150 bucks for food,log_spending
+paid 8000 bucks for data,log_spending
+paid 10000 for uber,log_spending
+spent 2.5k on drinks,log_spending
+spent 5k on coffee,log_spending
+spent 8000naira on drinks,log_spending
+1000 on lunch,log_spending
+just spent 50 for groceries,log_spending
+cost me 2.5k to get gas,log_spending
+spent 1000naira on uber,log_spending
+bought coffee for ₦50,log_spending
+just spent 45 for data,log_spending
+bought food for 5k naira,log_spending
+gonna reading,start_activity
+cost me 50 to get gas,log_spending
+1m on bills,log_spending
+paid 2.5k for airtime,log_spending
+paid 500 bucks for bills,log_spending
+begin reading,start_activity
+how are you,idle_chat
+10000 on bills,log_spending
+dropped 500 bucks on airtime,log_spending
+5k on groceries,log_spending
+dropped 50 bucks on airtime,log_spending
+bought coffee for ₦2.5k,log_spending
+spent 50 NGN on data,log_spending
+paid 200.50 for lunch,log_spending
+paid 8000 bucks for food,log_spending
+bought subscription for 150 naira,log_spending
+paid 1m bucks for dinner,log_spending
+begin lunch,start_activity
+spent 5knaira on subscription,log_spending
+got gas for 8000,log_spending
+spent 1000naira on data,log_spending
+bought airtime for ₦8000,log_spending
+1000 on uber,log_spending
+spent 8000 on airtime,log_spending
+spent 5k on dinner,log_spending
+changing to meditation,transition_activity
+cost me 10000 to get food,log_spending
+just spent 150 for coffee,log_spending
+bought uber for ₦1000,log_spending
+bought airtime for ₦200.50,log_spending
+cost me 1000 to get coffee,log_spending
+gonna go do lunch now,transition_activity
+gonna go do workout now,transition_activity
+bought airtime for ₦1000,log_spending
+spent 1000 NGN on lunch,log_spending
+bought bills for 50 naira,log_spending
+bought drinks for 500 naira,log_spending
+8000 on gas,log_spending
+got lunch for 50,log_spending
+paid 2.5k for coffee,log_spending
+just spent 45 for airtime,log_spending
+paid 2.5k bucks for coffee,log_spending
+just spent 1000 for data,log_spending
+spent 50 NGN on lunch,log_spending
+just paid ₦150 for airtime,log_spending
+bought groceries for 1m naira,log_spending
+paid 8000 bucks for drinks,log_spending
+got drinks for 45,log_spending
+paid 1000 for lunch,log_spending
+spent 50 NGN on food,log_spending
+bought coffee for ₦10000,log_spending
+bought drinks for 1000 naira,log_spending
+spent 2.5knaira on drinks,log_spending
+bought lunch for 8000 naira,log_spending
+spent 500naira on drinks,log_spending
+bought gas for 8000 naira,log_spending
+dropped 45 bucks on coffee,log_spending
+heading to gym,start_activity
+cost me 5k to get dinner,log_spending
+stopped,end_activity
+bought lunch for ₦1000,log_spending
+got subscription for 8000,log_spending
+bought airtime for ₦150,log_spending
+bought coffee for 150 naira,log_spending
+bought food for 50 naira,log_spending
+500 on drinks,log_spending
+just paid ₦500 for gas,log_spending
+spent 1000 on coffee,log_spending
+dropped 45 bucks on bills,log_spending
+cost me 1000 to get food,log_spending
+paid 50 bucks for food,log_spending
+bought drinks for 5k naira,log_spending
+time for driving,start_activity
+dropped 45 bucks on dinner,log_spending
+just spent 150 for groceries,log_spending
+got data for 500,log_spending
+paid 5k bucks for drinks,log_spending
+spent 200.50 NGN on drinks,log_spending
+bought bills for 45 naira,log_spending
+spent 150 on groceries,log_spending
+bought gas for ₦2.5k,log_spending
+paid 150 bucks for gas,log_spending
+cost me 1000 to get drinks,log_spending
+spent 5k NGN on drinks,log_spending
+spent 8000 on food,log_spending
+paid 45 for bills,log_spending
+bought gas for 5k naira,log_spending
+dropped 8000 bucks on dinner,log_spending
+bought dinner for 150 naira,log_spending
+starting driving,start_activity
+done,end_activity
+paid 50 for data,log_spending
+cost me 150 to get food,log_spending
+8000 on drinks,log_spending
+paid 500 bucks for subscription,log_spending
+cost me 1m to get coffee,log_spending
+spent 50naira on groceries,log_spending
+just spent 5k for dinner,log_spending
+bought subscription for ₦8000,log_spending
+spent 10000naira on gas,log_spending
+8000 on bills,log_spending
+got airtime for 45,log_spending
+cost me 200.50 to get gas,log_spending
+bought gas for ₦150,log_spending
+begin chores,start_activity
+just spent 8000 for data,log_spending
+paid 10000 bucks for groceries,log_spending
+spent 2.5k on groceries,log_spending
+paid 500 for lunch,log_spending
+paid 150 for lunch,log_spending
+spent 1000naira on dinner,log_spending
+just paid ₦45 for groceries,log_spending
+dropped 50 bucks on lunch,log_spending
+dropped 1m bucks on data,log_spending
+bought data for 1m naira,log_spending
+10000 on airtime,log_spending
+spent 1000 on lunch,log_spending
+paid 1m for uber,log_spending
+bought food for 45 naira,log_spending
+paid 10000 for food,log_spending
+spent 8000 NGN on groceries,log_spending
+paid 8000 for groceries,log_spending
+bought groceries for 10000 naira,log_spending
+500 on lunch,log_spending
+bought uber for 10000 naira,log_spending
+paid 5k for groceries,log_spending
+got gas for 5k,log_spending
+spent 5k NGN on dinner,log_spending
+just spent 8000 for uber,log_spending
+got groceries for 2.5k,log_spending
+just paid ₦5k for data,log_spending
+got gas for 500,log_spending
+paid 10000 for drinks,log_spending
+paid 150 bucks for bills,log_spending
+spent 45 on bills,log_spending
+dropped 50 bucks on groceries,log_spending
+paid 1000 bucks for groceries,log_spending
+just spent 500 for drinks,log_spending
+200.50 on food,log_spending
+just spent 45 for lunch,log_spending
+dropped 45 bucks on lunch,log_spending
+spent 500naira on groceries,log_spending
+dropped 500 bucks on uber,log_spending
+shifting to reading,transition_activity
+bought dinner for ₦50,log_spending
+just paid ₦8000 for groceries,log_spending
+spent 500 NGN on airtime,log_spending
+spent 50naira on food,log_spending
+spent 50 on dinner,log_spending
+just spent 10000 for drinks,log_spending
+got gas for 1000,log_spending
+just paid ₦500 for airtime,log_spending
+changing to coding,transition_activity
+hi,idle_chat
+shifting to meeting,transition_activity
+just spent 500 for airtime,log_spending
+got groceries for 500,log_spending
+spent 2.5knaira on groceries,log_spending
+spent 8000naira on dinner,log_spending
+cost me 50 to get food,log_spending
+heading to dinner,start_activity
+150 on lunch,log_spending
+paid 50 for uber,log_spending
+dropped 500 bucks on gas,log_spending
+cost me 1m to get subscription,log_spending
+just paid ₦500 for uber,log_spending
+just paid ₦8000 for lunch,log_spending
+changing to emails,transition_activity
+spent 50 NGN on coffee,log_spending
+bought dinner for ₦5k,log_spending
+bought dinner for ₦1m,log_spending
+bought airtime for ₦10000,log_spending
+just spent 1000 for gas,log_spending
+bought coffee for 45 naira,log_spending
+paid 10000 for subscription,log_spending
+paid 200.50 for airtime,log_spending
+paid 45 bucks for dinner,log_spending
+just paid ₦50 for uber,log_spending
+paid 45 for groceries,log_spending
+just paid ₦50 for food,log_spending
+just spent 1m for drinks,log_spending
+got subscription for 10000,log_spending
+begin meeting,start_activity
+just spent 2.5k for uber,log_spending
+cost me 45 to get dinner,log_spending
+got food for 8000,log_spending
+bought groceries for ₦500,log_spending
+spent 500 on food,log_spending
+just spent 500 for dinner,log_spending
+just paid ₦10000 for uber,log_spending
+bought drinks for 45 naira,log_spending
+bought uber for ₦150,log_spending
+paid 200.50 for data,log_spending
+just paid ₦45 for food,log_spending
+got gas for 50,log_spending
+cost me 150 to get airtime,log_spending
+just paid ₦200.50 for subscription,log_spending
+dropped 5k bucks on airtime,log_spending
+just paid ₦45 for subscription,log_spending
+just paid ₦1m for dinner,log_spending
+got lunch for 200.50,log_spending
+cost me 1m to get airtime,log_spending
+bought groceries for ₦150,log_spending
+spent 2.5knaira on subscription,log_spending
+spent 200.50 on dinner,log_spending
+spent 10000 NGN on food,log_spending
+bought uber for ₦50,log_spending
+just paid ₦50 for bills,log_spending
+bought data for 150 naira,log_spending
+about to do some meditation,start_activity
+spent 2.5k on airtime,log_spending
+spent 10000 NGN on data,log_spending
+paid 150 bucks for drinks,log_spending
+bought coffee for ₦150,log_spending
+spent 2.5k NGN on bills,log_spending
+paid 1m bucks for coffee,log_spending
+spent 8000 NGN on bills,log_spending
+bought groceries for 500 naira,log_spending
+bought bills for ₦150,log_spending
+dropped 150 bucks on data,log_spending
+im doing dinner now instead,transition_activity
+just paid ₦200.50 for lunch,log_spending
+got airtime for 10000,log_spending
+paid 5k for coffee,log_spending
+1m on food,log_spending
+paid 50 for coffee,log_spending
+spent 10000 NGN on subscription,log_spending
+just paid ₦2.5k for gas,log_spending
+paid 200.50 for food,log_spending
+just spent 5k for gas,log_spending
+paid 50 for dinner,log_spending
+got bills for 500,log_spending
+spent 5knaira on bills,log_spending
+spent 150naira on airtime,log_spending
+spent 2.5k NGN on airtime,log_spending
+spent 150naira on gas,log_spending
+time for coding,start_activity
+dropped 1m bucks on uber,log_spending
+bought dinner for 10000 naira,log_spending
+paid 1000 bucks for dinner,log_spending
+200.50 on airtime,log_spending
+paid 50 bucks for subscription,log_spending
+just spent 5k for groceries,log_spending
+dropped 5k bucks on food,log_spending
+bought bills for ₦1000,log_spending
+dropped 45 bucks on drinks,log_spending
+got subscription for 5k,log_spending
+cost me 1m to get food,log_spending
+paid 200.50 for bills,log_spending
+paid 2.5k for data,log_spending
+spent 150 NGN on gas,log_spending
+paid 200.50 bucks for uber,log_spending
+cost me 200.50 to get lunch,log_spending
+spent 2.5k NGN on uber,log_spending
+switching to driving,transition_activity
+gonna go do meditation now,transition_activity
+paid 1000 bucks for bills,log_spending
+bought drinks for 2.5k naira,log_spending
+cost me 1000 to get lunch,log_spending
+45 on groceries,log_spending
+just paid ₦200.50 for food,log_spending
+just paid ₦1000 for drinks,log_spending
+now reading,transition_activity
+got bills for 45,log_spending
+dropped 1m bucks on airtime,log_spending
+bought food for 10000 naira,log_spending
+hello,idle_chat
+dropped 10000 bucks on uber,log_spending
+45 on coffee,log_spending
+just spent 500 for lunch,log_spending
+1m on airtime,log_spending
+just spent 50 for airtime,log_spending
+bought data for ₦150,log_spending
+spent 500 on airtime,log_spending
+bought gas for 2.5k naira,log_spending
+150 on coffee,log_spending
+paid 2.5k bucks for food,log_spending
+just paid ₦500 for bills,log_spending
+heading to emails,start_activity
+bought subscription for 10000 naira,log_spending
+just spent 1000 for subscription,log_spending
+just paid ₦1m for data,log_spending
+bought lunch for 45 naira,log_spending
+just spent 2.5k for coffee,log_spending
+dropped 10000 bucks on airtime,log_spending
+50 on bills,log_spending
+starting emails,start_activity
+50 on coffee,log_spending
+spent 1m on dinner,log_spending
+got lunch for 500,log_spending
+spent 45naira on uber,log_spending
+just paid ₦10000 for subscription,log_spending
+spent 1000 on groceries,log_spending
+paid 8000 for gas,log_spending
+got groceries for 1000,log_spending
+got groceries for 200.50,log_spending
+just spent 500 for coffee,log_spending
+starting coding,start_activity
+spent 150 NGN on uber,log_spending
+paid 50 for gas,log_spending
+45 on gas,log_spending
+bought uber for 1000 naira,log_spending
+just paid ₦150 for data,log_spending
+paid 500 for drinks,log_spending
+bought data for 5k naira,log_spending
+bought food for ₦1m,log_spending
+bought dinner for ₦2.5k,log_spending
+paid 200.50 bucks for gas,log_spending
+got dinner for 5k,log_spending
+45 on bills,log_spending
+spent 8000naira on uber,log_spending
+about to do some coding,start_activity
+just paid ₦500 for dinner,log_spending
+switching to emails,transition_activity
+bought coffee for ₦200.50,log_spending
+paid 1m for dinner,log_spending
+spent 150 on drinks,log_spending
+spent 200.50naira on coffee,log_spending
+paid 10000 for coffee,log_spending
+45 on lunch,log_spending
+im going to start lunch,start_activity
+cost me 50 to get airtime,log_spending
+got bills for 1000,log_spending
+got gas for 200.50,log_spending
+spent 45 NGN on coffee,log_spending
+cost me 150 to get coffee,log_spending
+cost me 8000 to get airtime,log_spending
+paid 1000 bucks for uber,log_spending
+bought uber for ₦5k,log_spending
+just spent 10000 for coffee,log_spending
+spent 10000 on lunch,log_spending
+about to do some workout,start_activity
+cost me 500 to get airtime,log_spending
+bought subscription for ₦50,log_spending
+paid 1m bucks for drinks,log_spending
+got subscription for 200.50,log_spending
+who are you,idle_chat
+just spent 8000 for food,log_spending
+spent 1000 NGN on subscription,log_spending
+dropped 1m bucks on coffee,log_spending
+got bills for 8000,log_spending
+spent 45 on coffee,log_spending
+bought groceries for ₦1m,log_spending
+bought data for 2.5k naira,log_spending
+45 on uber,log_spending
+got data for 10000,log_spending
+cost me 10000 to get groceries,log_spending
+paid 1m bucks for groceries,log_spending
+cost me 500 to get drinks,log_spending
+spent 1m on drinks,log_spending
+paid 10000 for dinner,log_spending
+cost me 2.5k to get lunch,log_spending
+spent 1000naira on groceries,log_spending
+bought drinks for ₦8000,log_spending
+spent 10000 NGN on dinner,log_spending
+bought subscription for 5k naira,log_spending
+bought groceries for ₦45,log_spending
+spent 200.50 on groceries,log_spending
+8000 on dinner,log_spending
+cost me 2.5k to get dinner,log_spending
+1000 on data,log_spending
+time for deep work,start_activity
+spent 1mnaira on lunch,log_spending
+shifting to dinner,transition_activity
+paid 50 bucks for bills,log_spending
+dropped 5k bucks on bills,log_spending
+got data for 8000,log_spending
+bought airtime for 8000 naira,log_spending
+spent 150 on bills,log_spending
+spent 200.50 NGN on subscription,log_spending
+just spent 5k for lunch,log_spending
+just paid ₦5k for bills,log_spending
+cost me 45 to get data,log_spending
+1m on subscription,log_spending
+paid 5k bucks for food,log_spending
+200.50 on coffee,log_spending
+paid 2.5k for groceries,log_spending
+paid 200.50 for subscription,log_spending
+time for reading,start_activity
+bought coffee for ₦8000,log_spending
+2.5k on uber,log_spending
+bought data for 500 naira,log_spending
+cost me 1000 to get uber,log_spending
+nowlunch,transition_activity
+spent 45 on drinks,log_spending
+got coffee for 1000,log_spending
+just paid ₦1m for subscription,log_spending
+paid 500 for coffee,log_spending
+just paid ₦150 for drinks,log_spending
+cost me 500 to get coffee,log_spending
+spent 200.50naira on airtime,log_spending
+1m on dinner,log_spending
+summary,get_summary
+cost me 45 to get drinks,log_spending
+paid 1m for food,log_spending
+150 on food,log_spending
+paid 1m bucks for lunch,log_spending
+dropped 500 bucks on subscription,log_spending
+bought data for ₦500,log_spending
+just paid ₦5k for lunch,log_spending
+cost me 1000 to get groceries,log_spending
+cost me 10000 to get coffee,log_spending
+just spent 5k for coffee,log_spending
+paid 45 for subscription,log_spending
+paid 200.50 bucks for bills,log_spending
+5k on uber,log_spending
+cost me 50 to get groceries,log_spending
+dropped 10000 bucks on lunch,log_spending
+just paid ₦1000 for airtime,log_spending
+just paid ₦8000 for dinner,log_spending
+spent 5k on lunch,log_spending
+paid 8000 for drinks,log_spending
+spent 50 on subscription,log_spending
+50 on groceries,log_spending
+bought uber for 1m naira,log_spending
+spent 1m NGN on lunch,log_spending
+paid 45 bucks for data,log_spending
+just spent 2.5k for subscription,log_spending
+got food for 200.50,log_spending
+time for emails,start_activity
+spent 1000 NGN on groceries,log_spending
+spent 200.50 NGN on lunch,log_spending
+bought gas for ₦500,log_spending
+spent 500 NGN on dinner,log_spending
+spent 1m on bills,log_spending
+just spent 45 for subscription,log_spending
+paid 45 for airtime,log_spending
+paid 2.5k bucks for uber,log_spending
+bought lunch for ₦1m,log_spending
+that's great,idle_chat
+just spent 500 for bills,log_spending
+shifting to emails,transition_activity
+1000 on subscription,log_spending
+spent 50naira on data,log_spending
+paid 5k for drinks,log_spending
+bought coffee for 5k naira,log_spending
+paid 5k for dinner,log_spending
+just spent 45 for food,log_spending
+just spent 150 for lunch,log_spending
+spent 8000 NGN on lunch,log_spending
+just spent 1000 for bills,log_spending
+150 on groceries,log_spending
+just paid ₦500 for groceries,log_spending
+2.5k on dinner,log_spending
+dropped 8000 bucks on groceries,log_spending
+dropped 50 bucks on dinner,log_spending
+gonna go do dinner now,transition_activity
+begin coding,start_activity
+dropped 5k bucks on groceries,log_spending
+spent 45naira on food,log_spending
+spent 45naira on groceries,log_spending
+just paid ₦5k for subscription,log_spending
+bought uber for ₦45,log_spending
+got coffee for 5k,log_spending
+got airtime for 5k,log_spending
+paid 5k bucks for uber,log_spending
+dropped 8000 bucks on coffee,log_spending
+dropped 150 bucks on coffee,log_spending
+spent 45 on lunch,log_spending
+dropped 45 bucks on gas,log_spending
+good night,idle_chat
+now emails,transition_activity
+yes,idle_chat
+paid 45 bucks for uber,log_spending
+moving to dinner,transition_activity
+spent 50 NGN on uber,log_spending
+spent 500 on drinks,log_spending
+got food for 50,log_spending
+got airtime for 200.50,log_spending
+paid 2.5k for dinner,log_spending
+spent 5knaira on drinks,log_spending
+spent 50 NGN on bills,log_spending
+bought subscription for ₦10000,log_spending
+bought airtime for 2.5k naira,log_spending
+cost me 5k to get bills,log_spending
+5k on lunch,log_spending
+cost me 8000 to get uber,log_spending
+just spent 150 for drinks,log_spending
+spent 45 NGN on gas,log_spending
+bought data for 200.50 naira,log_spending
+bought bills for ₦10000,log_spending
+bought coffee for 50 naira,log_spending
+bought data for ₦1m,log_spending
+just spent 150 for gas,log_spending
+paid 5k for gas,log_spending
+just paid ₦2.5k for airtime,log_spending
+just paid ₦1000 for bills,log_spending
+spent 2.5k on gas,log_spending
+spent 2.5knaira on airtime,log_spending
+paid 2.5k bucks for drinks,log_spending
+just spent 1m for food,log_spending
+spent 5k on airtime,log_spending
+500 on bills,log_spending
+paid 5k for airtime,log_spending
+paid 50 bucks for coffee,log_spending
+just spent 5k for airtime,log_spending
+just paid ₦1000 for groceries,log_spending
+got lunch for 2.5k,log_spending
+paid 50 bucks for uber,log_spending
+paid 500 bucks for airtime,log_spending
+paid 150 bucks for uber,log_spending
+bought subscription for ₦500,log_spending
+paid 2.5k for uber,log_spending
+spent 5knaira on coffee,log_spending
+spent 50 on uber,log_spending
+spent 2.5k on lunch,log_spending
+1m on lunch,log_spending
+spent 200.50 on drinks,log_spending
+paid 1m bucks for uber,log_spending
+paid 1000 bucks for lunch,log_spending
+spent 8000 on uber,log_spending
+bought bills for 5k naira,log_spending
+spent 1m NGN on groceries,log_spending
+paid 8000 for data,log_spending
+spent 200.50 on food,log_spending
+2.5k on gas,log_spending
+im going to start emails,start_activity
+cost me 10000 to get airtime,log_spending
+spent 1m on lunch,log_spending
+spent 5k on subscription,log_spending
+im doing meeting now instead,transition_activity
+starting chores,start_activity
+spent 2.5k NGN on dinner,log_spending
+spent 150 on lunch,log_spending
+begin dinner,start_activity
+spent 10000 on bills,log_spending
+spent 50naira on drinks,log_spending
+bought dinner for ₦1000,log_spending
+spent 1m on coffee,log_spending
+just paid ₦8000 for drinks,log_spending
+paid 10000 for groceries,log_spending
+dropped 8000 bucks on food,log_spending
+bought dinner for ₦500,log_spending
+1m on coffee,log_spending
+cost me 150 to get lunch,log_spending
+just spent 50 for drinks,log_spending
+cost me 10000 to get gas,log_spending
+bought drinks for 1m naira,log_spending
+heading to driving,start_activity
+just paid ₦45 for coffee,log_spending
+just paid ₦10000 for gas,log_spending
+spent 45 NGN on food,log_spending
+cost me 10000 to get dinner,log_spending
+just spent 200.50 for drinks,log_spending
+just paid ₦1m for groceries,log_spending
+cost me 500 to get dinner,log_spending
+what's up,idle_chat
+cost me 8000 to get data,log_spending
+just spent 1m for uber,log_spending
+just spent 2.5k for food,log_spending
+spent 5knaira on food,log_spending
+spent 150naira on subscription,log_spending
+that's it,end_activity
+1000 on drinks,log_spending
+dropped 10000 bucks on bills,log_spending
+paid 10000 bucks for coffee,log_spending
+dropped 2.5k bucks on gas,log_spending
+spent 150 NGN on subscription,log_spending
+got subscription for 150,log_spending
+im doing coding now instead,transition_activity
+spent 5knaira on airtime,log_spending
+paid 50 for bills,log_spending
+dropped 500 bucks on groceries,log_spending
+paid 10000 bucks for gas,log_spending
+paid 5k bucks for dinner,log_spending
+spent 45naira on data,log_spending
+starting workout,start_activity
+spent 150 NGN on drinks,log_spending
+dropped 10000 bucks on dinner,log_spending
+200.50 on lunch,log_spending
+cost me 500 to get uber,log_spending
+good morning,idle_chat
+changing to dinner,transition_activity
+just spent 50 for subscription,log_spending
+just spent 50 for lunch,log_spending
+dropped 1m bucks on food,log_spending
+got uber for 1000,log_spending
+dropped 200.50 bucks on gas,log_spending
+5k on food,log_spending
+spent 5k NGN on gas,log_spending
+cost me 2.5k to get food,log_spending
+8000 on subscription,log_spending
+just paid ₦10000 for data,log_spending
+cost me 150 to get dinner,log_spending
+cost me 5k to get groceries,log_spending
+spent 1000 NGN on uber,log_spending
+paid 200.50 bucks for coffee,log_spending
+dropped 2.5k bucks on uber,log_spending
+dropped 5k bucks on coffee,log_spending
+spent 1000naira on airtime,log_spending
+spent 1000naira on subscription,log_spending
+paid 1m for groceries,log_spending
+just paid ₦1m for coffee,log_spending
+5k on subscription,log_spending
+spent 500naira on airtime,log_spending
+dropped 200.50 bucks on airtime,log_spending
+10000 on groceries,log_spending
+cost me 500 to get data,log_spending
+paid 1000 bucks for drinks,log_spending
+spent 10000naira on bills,log_spending
+dropped 150 bucks on uber,log_spending
+spent 10000 on gas,log_spending
+bought lunch for 10000 naira,log_spending
+bought drinks for 10000 naira,log_spending
+paid 500 bucks for gas,log_spending
+bought airtime for 45 naira,log_spending
+bought bills for ₦1m,log_spending
+bought bills for ₦8000,log_spending
+cost me 150 to get uber,log_spending
+ok cool,idle_chat
+spent 200.50 on coffee,log_spending
+paid 50 for lunch,log_spending
+got lunch for 1000,log_spending
+maybe,idle_chat
+just spent 1000 for dinner,log_spending
+cost me 2.5k to get coffee,log_spending
+got uber for 2.5k,log_spending
+begin emails,start_activity
+time for meeting,start_activity
+just spent 5k for uber,log_spending
+moving to driving,transition_activity
+switching to gym,transition_activity
+im doing meditation now instead,transition_activity
+bought food for ₦200.50,log_spending
+got groceries for 5k,log_spending
+cost me 45 to get groceries,log_spending
+bought lunch for ₦10000,log_spending
+got coffee for 45,log_spending
+paid 8000 bucks for subscription,log_spending
+cost me 1000 to get data,log_spending
+cost me 1m to get data,log_spending
+paid 150 for data,log_spending
+spent 1m NGN on drinks,log_spending
+got uber for 200.50,log_spending
+got food for 10000,log_spending
+bought bills for 10000 naira,log_spending
+bought data for 8000 naira,log_spending
+dropped 1000 bucks on lunch,log_spending
+got drinks for 200.50,log_spending
+just spent 500 for gas,log_spending
+cost me 1m to get lunch,log_spending
+got drinks for 5k,log_spending
+shifting to workout,transition_activity
+cost me 45 to get gas,log_spending
+just paid ₦5k for food,log_spending
+spent 5k NGN on food,log_spending
+dropped 50 bucks on subscription,log_spending
+gonna emails,start_activity
+bought drinks for ₦45,log_spending
+spent 1000 NGN on bills,log_spending
+45 on food,log_spending
+bought airtime for 5k naira,log_spending
+paid 1000 for coffee,log_spending
+bought gas for ₦1m,log_spending
+spent 8000 NGN on data,log_spending
+now workout,transition_activity
+bought coffee for 1m naira,log_spending
+spent 5k on data,log_spending
+gonna go do chores now,transition_activity
+just spent 50 for gas,log_spending
+spent 45 NGN on data,log_spending
+just spent 2.5k for dinner,log_spending
+paid 1m bucks for gas,log_spending
+gonna go do driving now,transition_activity
+cost me 8000 to get drinks,log_spending
+dropped 50 bucks on gas,log_spending
+spent 8000 NGN on drinks,log_spending
+200.50 on groceries,log_spending
+heading to coding,start_activity
+bought data for ₦8000,log_spending
+bought data for ₦50,log_spending
+spent 5knaira on gas,log_spending
+got gas for 150,log_spending
+just paid ₦500 for drinks,log_spending
+dropped 150 bucks on airtime,log_spending
+spent 50 NGN on groceries,log_spending
+spent 500 NGN on gas,log_spending
+just spent 50 for food,log_spending
+bought coffee for 8000 naira,log_spending
+dropped 1000 bucks on data,log_spending
+bought bills for ₦50,log_spending
+paid 45 bucks for airtime,log_spending
+cost me 1m to get groceries,log_spending
+dropped 5k bucks on lunch,log_spending
+got data for 2.5k,log_spending
+paid 500 bucks for dinner,log_spending
+spent 8000 on gas,log_spending
+cost me 8000 to get coffee,log_spending
+dropped 500 bucks on data,log_spending
+spent 150 NGN on groceries,log_spending
+spent 200.50 NGN on groceries,log_spending
+8000 on uber,log_spending
+got airtime for 8000,log_spending
+just paid ₦45 for drinks,log_spending
+got groceries for 10000,log_spending
+paid 8000 for lunch,log_spending
+bought bills for ₦45,log_spending
+paid 150 bucks for groceries,log_spending
+just spent 8000 for gas,log_spending
+got dinner for 1000,log_spending
+got data for 200.50,log_spending
+bought groceries for 50 naira,log_spending
+paid 150 bucks for data,log_spending
+what have I done today,get_summary
+bought food for 1m naira,log_spending
+bought airtime for ₦45,log_spending
+paid 500 for groceries,log_spending
+spent 2.5k NGN on gas,log_spending
+just paid ₦500 for data,log_spending
+just spent 2.5k for data,log_spending
+spent 10000 NGN on coffee,log_spending
+bought airtime for ₦5k,log_spending
+just spent 2.5k for drinks,log_spending
+just spent 50 for uber,log_spending
+paid 500 bucks for food,log_spending
+dropped 200.50 bucks on bills,log_spending
+changing to workout,transition_activity
+spent 500 NGN on lunch,log_spending
+bought groceries for ₦50,log_spending
+cost me 50 to get data,log_spending
+im going to start driving,start_activity
+spent 8000naira on lunch,log_spending
+dropped 200.50 bucks on subscription,log_spending
+about to do some deep work,start_activity
+dropped 8000 bucks on drinks,log_spending
+just spent 10000 for groceries,log_spending
+spent 2.5k on coffee,log_spending
+just spent 1m for data,log_spending
+paid 2.5k for lunch,log_spending
+just spent 5k for bills,log_spending
+got lunch for 5k,log_spending
+1000 on dinner,log_spending
+cost me 5k to get lunch,log_spending
+just paid ₦10000 for coffee,log_spending
+paid 45 bucks for food,log_spending
+spent 500 NGN on uber,log_spending
+spent 2.5k NGN on food,log_spending
+spent 5k on drinks,log_spending
+cost me 1m to get drinks,log_spending
+paid 10000 for data,log_spending
+spent 45 NGN on bills,log_spending
+spent 500 on groceries,log_spending
+500 on subscription,log_spending
+cost me 8000 to get bills,log_spending
+switching to deep work,transition_activity
+gonna workout,start_activity
+paid 150 bucks for coffee,log_spending
+cost me 200.50 to get drinks,log_spending
+dropped 5k bucks on subscription,log_spending
+just spent 5k for drinks,log_spending
+bought data for ₦5k,log_spending
+heading to lunch,start_activity
+paid 1000 bucks for food,log_spending
+got subscription for 500,log_spending
+paid 2.5k bucks for data,log_spending
+just paid ₦50 for groceries,log_spending
+just paid ₦1000 for subscription,log_spending
+just paid ₦8000 for subscription,log_spending
+spent 8000 on lunch,log_spending
+how did I do today,get_summary
+paid 10000 bucks for food,log_spending
+spent 1mnaira on drinks,log_spending
+bought airtime for 500 naira,log_spending
+bought airtime for 200.50 naira,log_spending
+spent 10000 NGN on groceries,log_spending
+paid 45 bucks for lunch,log_spending
+spent 1000 NGN on food,log_spending
+spent 500 on data,log_spending
+bought subscription for ₦5k,log_spending
+bought airtime for 1000 naira,log_spending
+paid 500 bucks for data,log_spending
+spent 10000naira on groceries,log_spending
+paid 200.50 bucks for food,log_spending
+got dinner for 500,log_spending
+just paid ₦8000 for uber,log_spending
+spent 8000naira on coffee,log_spending
+just paid ₦50 for data,log_spending
+paid 8000 for coffee,log_spending
+just paid ₦1m for uber,log_spending
+bought airtime for 50 naira,log_spending
+dropped 1000 bucks on dinner,log_spending
+now dinner,transition_activity
+bought bills for 2.5k naira,log_spending
+cost me 50 to get drinks,log_spending
+just spent 8000 for dinner,log_spending
+500 on uber,log_spending
+dropped 2.5k bucks on groceries,log_spending
+bought subscription for ₦45,log_spending
+bought bills for 150 naira,log_spending
+paid 10000 bucks for drinks,log_spending
+paid 1m for airtime,log_spending
+500 on food,log_spending
+spent 150naira on food,log_spending
+spent 150 NGN on dinner,log_spending
+just spent 1000 for coffee,log_spending
+shifting to lunch,transition_activity
+got dinner for 10000,log_spending
+spent 50 on food,log_spending
+bought bills for 500 naira,log_spending
+just paid ₦8000 for coffee,log_spending
+just paid ₦2.5k for drinks,log_spending
+bought airtime for 10000 naira,log_spending
+cost me 1000 to get dinner,log_spending
+bought groceries for 2.5k naira,log_spending
+dropped 1m bucks on gas,log_spending
+bought gas for ₦8000,log_spending
+the weather is nice,idle_chat
+spent 200.50 NGN on gas,log_spending
+10000 on gas,log_spending
+dropped 1000 bucks on airtime,log_spending
+bought uber for ₦2.5k,log_spending
+dropped 50 bucks on food,log_spending
+got bills for 10000,log_spending
+im doing driving now instead,transition_activity
+got food for 5k,log_spending
+cost me 200.50 to get airtime,log_spending
+bought groceries for 150 naira,log_spending
+got airtime for 500,log_spending
+paid 1m bucks for airtime,log_spending
+changing to reading,transition_activity
+paid 50 bucks for airtime,log_spending
+spent 500naira on coffee,log_spending
+moving to reading,transition_activity
+cost me 50 to get bills,log_spending
+spent 2.5knaira on food,log_spending
+just paid ₦10000 for groceries,log_spending
+spent 200.50naira on gas,log_spending
+just spent 2.5k for airtime,log_spending
+just spent 200.50 for lunch,log_spending
+paid 500 for food,log_spending
+bought data for ₦200.50,log_spending
+paid 1m bucks for subscription,log_spending
+just spent 500 for food,log_spending
+just paid ₦200.50 for uber,log_spending
+spent 150 on uber,log_spending
+paid 10000 bucks for subscription,log_spending
+cost me 200.50 to get food,log_spending
+got coffee for 10000,log_spending
+spent 8000 NGN on food,log_spending
+cost me 200.50 to get uber,log_spending
+just spent 10000 for dinner,log_spending
+spent 10000 NGN on bills,log_spending
+got coffee for 500,log_spending
+just paid ₦2.5k for coffee,log_spending
+paid 1000 for drinks,log_spending
+paid 8000 for uber,log_spending
+spent 10000 NGN on gas,log_spending
+got groceries for 150,log_spending
+cost me 5k to get coffee,log_spending
+bought gas for 1m naira,log_spending
+cost me 45 to get bills,log_spending
+spent 45 on food,log_spending
+150 on bills,log_spending
+time for workout,start_activity
+dropped 8000 bucks on gas,log_spending
+paid 50 bucks for data,log_spending
+just spent 8000 for subscription,log_spending
+spent 1m NGN on food,log_spending
+paid 500 for data,log_spending
+bought drinks for ₦2.5k,log_spending
+spent 1000 on subscription,log_spending
+got bills for 50,log_spending
+spent 200.50 on gas,log_spending
+dropped 50 bucks on coffee,log_spending
+just spent 1m for groceries,log_spending
+got gas for 1m,log_spending
+500 on dinner,log_spending
+now coding,transition_activity
+200.50 on dinner,log_spending
+time for chores,start_activity
+just paid ₦150 for coffee,log_spending
+got airtime for 150,log_spending
+just spent 2.5k for groceries,log_spending
+got airtime for 2.5k,log_spending
+spent 10000 on coffee,log_spending
+bought airtime for ₦2.5k,log_spending
+spent 1000naira on food,log_spending
+bought dinner for 50 naira,log_spending
+spent 45naira on drinks,log_spending
+changing to lunch,transition_activity
+paid 8000 for food,log_spending
+cost me 1000 to get airtime,log_spending
+begin meditation,start_activity
+spent 2.5k on food,log_spending
+500 on gas,log_spending
+spent 200.50 on uber,log_spending
+spent 10000 on airtime,log_spending
+got subscription for 2.5k,log_spending
+bought dinner for 500 naira,log_spending
+bought drinks for ₦200.50,log_spending
+bought subscription for 45 naira,log_spending
+switching to meeting,transition_activity
+cost me 8000 to get dinner,log_spending
+paid 45 for dinner,log_spending
+paid 150 for dinner,log_spending
+now meditation,transition_activity
+got dinner for 150,log_spending
+paid 150 bucks for subscription,log_spending
+2.5k on groceries,log_spending
+paid 45 for coffee,log_spending
+shifting to coding,transition_activity
+dropped 10000 bucks on groceries,log_spending
+spent 500 on coffee,log_spending
+50 on gas,log_spending
+1000 on gas,log_spending
+im going to start gym,start_activity
+spent 2.5k on data,log_spending
+spent 2.5k on bills,log_spending
+just spent 1m for gas,log_spending
+spending500 on foo,log_spending
+bought coffee for ₦5k,log_spending
+dropped 1m bucks on lunch,log_spending
+dropped 8000 bucks on bills,log_spending
+got gas for 10000,log_spending
+got uber for 150,log_spending
+bought drinks for ₦500,log_spending
+bought dinner for 200.50 naira,log_spending
+5k on coffee,log_spending
+just paid ₦45 for uber,log_spending
+cost me 150 to get subscription,log_spending
+switching to lunch,transition_activity
+spent 45 NGN on airtime,log_spending
+spent 150 on data,log_spending
+paid 500 for gas,log_spending
+spent 500 on subscription,log_spending
+just spent 150 for food,log_spending
+bought gas for ₦50,log_spending
+dropped 5k bucks on dinner,log_spending
+got drinks for 2.5k,log_spending
+dropped 150 bucks on drinks,log_spending
+bought bills for 200.50 naira,log_spending
+bought lunch for ₦50,log_spending
+spent 150 on subscription,log_spending
+just paid ₦1m for gas,log_spending
+spent 50 on groceries,log_spending
+spent 50naira on coffee,log_spending
+heading to chores,start_activity
+bought uber for 45 naira,log_spending
+dropped 1m bucks on drinks,log_spending
+starting meeting,start_activity
+spent 8000 on data,log_spending
+paid 1m for coffee,log_spending
+cost me 45 to get subscription,log_spending
+cost me 10000 to get data,log_spending
+starting lunch,start_activity
+got groceries for 50,log_spending
+just paid ₦150 for food,log_spending
+paid 10000 for airtime,log_spending
+bought dinner for 1000 naira,log_spending
+cost me 10000 to get drinks,log_spending
+dropped 10000 bucks on subscription,log_spending
+got uber for 500,log_spending
+spent 5knaira on data,log_spending
+paid 150 bucks for lunch,log_spending
+150 on subscription,log_spending
+paid 10000 bucks for data,log_spending
+spent 1m NGN on subscription,log_spending
+now deep work,transition_activity
+moving to workout,transition_activity
+spent 8000 NGN on airtime,log_spending
+spent 10000naira on airtime,log_spending
+spent 150 NGN on coffee,log_spending
+spent 45 NGN on dinner,log_spending
+cost me 1000 to get bills,log_spending
+spent 500naira on gas,log_spending
+paid 2.5k for food,log_spending
+dropped 2.5k bucks on bills,log_spending
+bought groceries for 8000 naira,log_spending
+dropped 1m bucks on groceries,log_spending
+spent 10000 on dinner,log_spending
+cost me 10000 to get lunch,log_spending
+cost me 45 to get coffee,log_spending
+dropped 45 bucks on airtime,log_spending
+bought data for 50 naira,log_spending
+dropped 8000 bucks on data,log_spending
+cost me 1000 to get gas,log_spending
+50 on uber,log_spending
+just spent 45 for drinks,log_spending
+spent 10000naira on lunch,log_spending
+spent 5knaira on groceries,log_spending
+cost me 1m to get gas,log_spending
+bought airtime for 150 naira,log_spending
+spent 50 NGN on subscription,log_spending
+begin driving,start_activity
+just paid ₦2.5k for dinner,log_spending
+spent 50 on coffee,log_spending
+bought lunch for 50 naira,log_spending
+spent 1000 on uber,log_spending
+bought drinks for ₦5k,log_spending
+bought food for ₦10000,log_spending
+just spent 45 for dinner,log_spending
+haha,idle_chat
+spent 50 NGN on gas,log_spending
+bought lunch for ₦500,log_spending
+paid 200.50 for groceries,log_spending
+switching to dinner,transition_activity
+dropped 500 bucks on food,log_spending
+paid 5k bucks for coffee,log_spending
+spent 200.50naira on uber,log_spending
+8000 on food,log_spending
+shifting to chores,transition_activity
+just paid ₦8000 for airtime,log_spending
+spent 200.50 NGN on dinner,log_spending
+bought uber for ₦500,log_spending
+paid 8000 bucks for lunch,log_spending
+spent 2.5k on subscription,log_spending
+spent 45 NGN on drinks,log_spending
+bought lunch for ₦2.5k,log_spending
+paid 150 for drinks,log_spending
+45 on airtime,log_spending
+just paid ₦2.5k for lunch,log_spending
+just paid ₦1m for airtime,log_spending
+paid 1000 for airtime,log_spending
+spent 1000 on airtime,log_spending
+spent 500 NGN on bills,log_spending
+got uber for 45,log_spending
+spent 8000 NGN on coffee,log_spending
+dropped 200.50 bucks on uber,log_spending
+spent 1000 on bills,log_spending
+spent 8000naira on bills,log_spending
+switching to coding,transition_activity
+paid 8000 bucks for uber,log_spending
+spent 8000 NGN on dinner,log_spending
+paid 150 bucks for airtime,log_spending
+bought uber for ₦200.50,log_spending
+spent 50naira on subscription,log_spending
+got food for 2.5k,log_spending
+thanks,idle_chat
+spent 50 on lunch,log_spending
+got airtime for 50,log_spending
+bought lunch for ₦200.50,log_spending
+cost me 150 to get groceries,log_spending
+8000 on lunch,log_spending
+spent 150 on airtime,log_spending
+bought dinner for 2.5k naira,log_spending
+spent 45 on subscription,log_spending
+10000 on dinner,log_spending
+just paid ₦50 for drinks,log_spending
+just spent 150 for dinner,log_spending
+got drinks for 8000,log_spending
+paid 1000 for dinner,log_spending
+bought dinner for ₦10000,log_spending
+200.50 on drinks,log_spending
+spent 5k NGN on data,log_spending
+just paid ₦2.5k for groceries,log_spending
+spent 200.50naira on bills,log_spending
+spent 1000 NGN on airtime,log_spending
+spent 1mnaira on subscription,log_spending
+spent 10000 NGN on uber,log_spending
+bought dinner for 45 naira,log_spending
+just spent 500 for uber,log_spending
+paid 50 bucks for drinks,log_spending
+spent 8000naira on food,log_spending
+moving to meeting,transition_activity
+spent 8000 NGN on gas,log_spending
+dropped 2.5k bucks on dinner,log_spending
+spent 5k NGN on bills,log_spending
+cost me 5k to get uber,log_spending
+spent 45naira on lunch,log_spending
+starting gym,start_activity
+just spent 150 for bills,log_spending
+paid 2.5k bucks for groceries,log_spending

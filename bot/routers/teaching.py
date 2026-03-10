@@ -4,9 +4,17 @@ from bot.states import BotStates
 from data.repository import repo
 from core.personality import PersonalityEngine
 
+from core.nlu import NLUEngine
+
 router = Router()
 
 VALID_INTENTS = ["start", "stop", "spent", "time", "summary", "future", "past"]
+
+@router.message(lambda message: NLUEngine.analyze(message.text)["intent"] == "none")
+async def handle_unknown(message: types.Message, state: FSMContext):
+    await state.set_state(BotStates.waiting_for_teach_intent)
+    await state.update_data(phrase=message.text)
+    await message.answer(PersonalityEngine.get_teach_me_response(message.text))
 
 @router.message(BotStates.waiting_for_teach_intent)
 async def process_teaching(message: types.Message, state: FSMContext):

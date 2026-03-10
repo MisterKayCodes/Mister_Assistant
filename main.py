@@ -8,11 +8,26 @@ from aiogram.client.default import DefaultBotProperties
 from config import settings
 from bot.guard import SmartGuardMiddleware
 from bot.routers import auth, activities, spending, teaching, reports, history
+import os
+import subprocess
 
 # Logging configuration
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
+def preload_nlu():
+    if not os.path.exists(os.path.join("data", "models", "mister_intent.pkl")):
+        logging.info("🧠 Brain missing. Generating data and Training NLU Model...")
+        if not os.path.exists(os.path.join("data", "training", "intent_dataset.csv")):
+            subprocess.run([sys.executable, "scripts/generate_nlu_data.py"])
+        subprocess.run([sys.executable, "scripts/train_nlu.py"])
+    
+    # Force singleton instantiation to load heavy spaCy/sklearn models before polling starts
+    from services.nlu_service import nlu_service
+    nlu_service.analyze("Waking up")
+
 async def main():
+    preload_nlu()
+    
     # Initialize Bot and Dispatcher
     bot = Bot(
         token=settings.BOT_TOKEN.get_secret_value(),

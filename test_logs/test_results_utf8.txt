@@ -1,0 +1,49 @@
+﻿--- Mister Assistant: Test Pilot Diagnostics --- 
+
+[PASS] Input: 'I want to go to the gym later today'
+      Expected: future | Actual: future
+----------------------------------------
+[PASS] Input: 'What is the time?'
+      Expected: time | Actual: time
+----------------------------------------
+[PASS] Input: 'I am coding'
+      Expected: present | Actual: present
+----------------------------------------
+[PASS] Input: 'I'll exercise at 5pm'
+      Expected: future | Actual: future
+----------------------------------------
+[PASS] Input: 'I finished lunch'
+      Expected: past | Actual: past
+----------------------------------------
+[PASS] Input: 'Summary'
+      Expected: summary | Actual: summary
+----------------------------------------
+[PASS] Input: 'Cancel that'
+      Expected: cancel | Actual: cancel
+----------------------------------------
+[PASS] Input: 'Random gibberish'
+      Expected: none | Actual: none
+----------------------------------------
+[PASS] Input: 'Spent 2000 on food'
+      Expected: spent | Actual: spent
+----------------------------------------
+[PASS] Input: 'I spent 2000 naira on food'
+      Expected: spent | Actual: spent
+----------------------------------------
+[PASS] Input: 'I spent 2000 naira'
+      Expected: spent | Actual: spent
+----------------------------------------
+[PASS] Input: 'spent on dinner'
+      Expected: spent | Actual: spent
+----------------------------------------
+[FAIL] Input: 'Remind me to gym in 10 minutes'
+      Expected: future | Actual: spent
+      Advice: Needs pattern adjustment in core/nlu.py or manual teaching.
+----------------------------------------
+[FAIL] Input: 'Remind me to gym in 10 mins'
+      Expected: future | Actual: spent
+      Advice: Needs pattern adjustment in core/nlu.py or manual teaching.
+----------------------------------------
+
+≡ƒôè Diagnostic Complete: 0/14 (0%)
+[!] Weaknesses detected in intent resolution. Hardening required.
