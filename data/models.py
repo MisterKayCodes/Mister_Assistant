@@ -44,6 +44,24 @@ class Spending(Base):
     timestamp: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=datetime.utcnow)
     payment_method: Mapped[Optional[str]] = mapped_column(String(64), default="PalmPay")
 
+class UserConversation(Base):
+    """Logs of every interaction for pattern learning."""
+    __tablename__ = "user_conversations"
+    
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    message: Mapped[str] = mapped_column(String(1024))
+    intent: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    timestamp: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=datetime.utcnow)
+
+class CustomMapping(Base):
+    """User-taught phrases and their intents."""
+    __tablename__ = "custom_mappings"
+    
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    phrase: Mapped[str] = mapped_column(String(256), unique=True, index=True)
+    intent: Mapped[str] = mapped_column(String(64))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=datetime.utcnow)
+
 class Pattern(Base):
     """Learned behaviors (The Fingerprint)."""
     __tablename__ = "patterns"

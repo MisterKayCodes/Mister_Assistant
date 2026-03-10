@@ -3,7 +3,7 @@ from typing import Optional, List
 
 from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
-from data.models import User, Activity, Spending, Pattern
+from data.models import User, Activity, Spending, Pattern, UserConversation, CustomMapping
 from config import settings
 from core.time_utils import get_now, ensure_wat
 
@@ -108,6 +108,34 @@ class Repository:
                     Spending.timestamp >= start_of_day,
                     Spending.timestamp <= end_of_day
                 )
+            )
+            return result.scalars().all()
+
+    # --- Learning & Evolution ---
+    async def log_conversation(self, message: str, intent: Optional[str]):
+        async with self.session_factory() as session:
+            log = UserConversation(message=message, intent=intent, timestamp=get_now())
+            session.add(log)
+            await session.commit()
+
+    async def add_custom_mapping(self, phrase: str, intent: str):
+        async with self.session_factory() as session:
+            mapping = CustomMapping(phrase=phrase.lower().strip(), intent=intent, created_at=get_now())
+            session.add(mapping)
+            await session.commit()
+
+    async def get_custom_intent(self, phrase: str) -> Optional[str]:
+        async with self.session_factory() as session:
+            result = await session.execute(
+                select(CustomMapping).where(CustomMapping.phrase == phrase.lower().strip())
+            )
+            mapping = result.scalar_one_or_none()
+            return mapping.intent if mapping else None
+
+    async def get_recent_conversations(self, limit: int = 50) -> List[UserConversation]:
+        async with self.session_factory() as session:
+            result = await session.execute(
+                select(UserConversation).order_by(UserConversation.timestamp.desc()).limit(limit)
             )
             return result.scalars().all()
 
