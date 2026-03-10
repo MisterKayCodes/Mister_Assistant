@@ -33,6 +33,8 @@ class SmartGuardMiddleware(BaseMiddleware):
         if registered_owner or await repo.is_vault_empty():
             return await handler(event, data)
 
-        # Ignore everyone else
+        # Ignore everyone else but log it
+        import logging
+        logging.info(f"🛡️ SmartGuard: Ignored message from unauthorized user {user_id}")
         return
 

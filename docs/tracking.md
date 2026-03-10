@@ -5,6 +5,10 @@
 | **Workflow Guardrails**| ✅ Done | 2026-03-10 | 2026-03-10 | `feat: setup architecture inspector and hot-reload run script` |
 | **Phase 4**            | ✅ Done        | 2026-03-10 | 2026-03-10 | `feat: implement phase 4 (scheduling & accountability)` | [walkthrough.md](walkthrough.md) |
 | **Refactor Phase**      | ✅ Done        | 2026-03-10 | 2026-03-10 | `refactor: separate FSM states and harden architecture inspector` | [readme.md](personal/readme.md) |
+| **Refinement Phase**    | ✅ Done        | 2026-03-10 | 2026-03-10 | `fix: NLU false-positives and negative duration calculations` | [implementation_plan.md](implementation_plan.md) |
+| **Certainty Phase**   | ✅ Done        | 2026-03-10 | 2026-03-10 | `feat: implement confirmation loops and certainty logic` | [implementation_plan.md](implementation_plan.md) |
+| **Test Pilot Phase**  | ✅ Done        | 2026-03-10 | 2026-03-10 | `feat: implement automated test pilot and NLU ambiguity detection` | [implementation_plan.md](implementation_plan.md) |
+| **Brain Cleanup**     | ✅ Done        | 2026-03-10 | 2026-03-10 | `fix: hardened NLU, implemented Test Pilot, and cleaned up brain mappings` | [implementation_plan.md](implementation_plan.md) |
 | **Git Automation** | ✅ Integrated | 2026-03-10 | 2026-03-10 | `feat: implement integrated watcher-based git sync` |
 | **Humanize & Harden**| ✅ Done | 2026-03-10 | 2026-03-10 | `feat: implement WAT support, personality engine, and watcher optimization` |
 

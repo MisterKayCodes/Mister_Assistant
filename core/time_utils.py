@@ -24,7 +24,7 @@ def ensure_wat(dt: datetime):
     if dt is None:
         return None
     if dt.tzinfo is None:
-        return dt.replace(tzinfo=pytz.UTC).astimezone(WAT)
+        return WAT.localize(dt)
     return dt.astimezone(WAT)
 
 def get_time_query_response():

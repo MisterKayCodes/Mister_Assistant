@@ -67,17 +67,22 @@ def start_bot():
 
         class BotFilter(DefaultFilter):
             def __call__(self, change, path):
-                # Normalize path for regex
-                path_str = path.replace("\\", "/")
-                # Ignore specific patterns
-                if any(re.search(p, path_str) for p in [
-                    r"\.db$", r"\.sqlite$", r"docs/", 
-                    r"personal/", r"\.git/", r"__pycache__/"
-                ]):
+                path_str = path.replace("\\", "/").lower()
+                # Ignore EVERYTHING that isn't a Python file or major config
+                if not path_str.endswith(".py"):
+                    if not path_str.endswith(".env") and not "requirements.txt" in path_str:
+                        return False
+                
+                # Still ignore specific directories even if they have .py (unlikely but safe)
+                if any(p in path_str for p in ["/docs/", "/personal/", "/.git/", "/__pycache__/", "/.venv/"]):
                     return False
+                
+                # Ignore the database even if it somehow passes
+                if ".db" in path_str or ".sqlite" in path_str:
+                    return False
+
                 return super().__call__(change, path)
 
-        # WATCH ONLY CODE - Using watch_filter
         run_process("./", 
                     target=f"{sys.executable} main.py",
                     watch_filter=BotFilter())
