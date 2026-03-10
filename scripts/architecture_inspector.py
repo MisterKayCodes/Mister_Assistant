@@ -12,6 +12,7 @@ import argparse
 DEFAULT_FORBIDDEN_IMPORTS = {
     "core": ["aiogram", "sqlalchemy", "bot", "data", "services"],
     "bot": ["sqlalchemy", "data.models"], 
+    "bot/states": ["bot/routers", "data", "core"],
     "data": ["aiogram", "services", "bot"],
     "services": ["aiogram", "bot", "sqlalchemy"]
 }

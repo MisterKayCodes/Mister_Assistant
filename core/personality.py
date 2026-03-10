@@ -53,15 +53,27 @@ class PersonalityEngine:
     START_FUTURE_RESPONSES = [
         "⏰ It's {time}! Time for **{activity}**. Are we starting now?",
         "🔔 Ring ring! **{activity}** time is here. Type 'yes' to start the timer!",
-        return random.choice(cls.CONFUSED_RESPONSES).format(text=text)
+    ]
+
+    TEACH_ME_RESPONSES = [
+        "🤔 Boss, I'm lost in the sauce. What does '{phrase}' mean? (e.g., 'means start coding')",
+        "🧩 '{phrase}'? My logic circuits are humming but I don't get it. Teach me! What should I do when you say this?",
+        "🧠 Brain freeze! I don't know '{phrase}'. Tell me its intent (e.g., 'means schedule')",
+    ]
+
+    LEARNED_RESPONSES = [
+        "📖 Got it! From now on, whenever you say '{phrase}', I'll know it means **{intent}**. I'm getting smarter!",
+        "🧠 Memory updated: '{phrase}' is now mapped to **{intent}**. Thanks for the upgrade, Boss!",
+        "✅ Lesson learned. I'll remember '{phrase}' means **{intent}** for next time.",
+    ]
 
     @classmethod
-    def get_time_response(cls, time_str: str):
-        return random.choice(cls.TIME_QUIRKS).format(time=time_str)
+    def get_teach_me_response(cls, phrase: str):
+        return random.choice(cls.TEACH_ME_RESPONSES).format(phrase=phrase)
 
     @classmethod
-    def get_error_response(cls, error: str):
-        return random.choice(cls.ERROR_RESPONSES).format(error=error)
+    def get_learned_response(cls, phrase: str, intent: str):
+        return random.choice(cls.LEARNED_RESPONSES).format(phrase=phrase, intent=intent)
 
     @classmethod
     def get_activity_response(cls, activity: str, duration: int):
