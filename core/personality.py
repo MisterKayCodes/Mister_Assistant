@@ -53,16 +53,6 @@ class PersonalityEngine:
     START_FUTURE_RESPONSES = [
         "⏰ It's {time}! Time for **{activity}**. Are we starting now?",
         "🔔 Ring ring! **{activity}** time is here. Type 'yes' to start the timer!",
-    ]
-
-    @classmethod
-    def get_activity_response(cls, activity: str, duration: int):
-        if "eat" in activity.lower() and duration > 30:
-            return random.choice(cls.EATING_JOKES).format(duration=duration)
-        return random.choice(cls.ACTIVITY_RESPONSES).format(activity=activity, duration=duration)
-
-    @classmethod
-    def get_confused_response(cls, text: str):
         return random.choice(cls.CONFUSED_RESPONSES).format(text=text)
 
     @classmethod
