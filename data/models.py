@@ -23,8 +23,8 @@ class Activity(Base):
     
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String(128))
-    start_time: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
-    end_time: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    start_time: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=datetime.utcnow)
+    end_time: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True), nullable=True)
     duration_minutes: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     
     # Context
@@ -41,7 +41,7 @@ class Spending(Base):
     amount: Mapped[float] = mapped_column(Float)
     category: Mapped[str] = mapped_column(String(64))
     description: Mapped[Optional[str]] = mapped_column(String(256), nullable=True)
-    timestamp: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    timestamp: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=datetime.utcnow)
     payment_method: Mapped[Optional[str]] = mapped_column(String(64), default="PalmPay")
 
 class Pattern(Base):

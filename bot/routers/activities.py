@@ -1,105 +1,94 @@
-import re
-from datetime import datetime
-from aiogram import Router, F, types
-from aiogram.filters import Command
+from aiogram import Router, types
+from core.parser import IntentEngine
+from core.personality import PersonalityEngine
+from core.time_utils import get_now, format_time, get_time_query_response
 from data.repository import repo
 from core.activities import ActivityBrain
-from services.event_bus import event_bus
 
 router = Router()
 
-@router.message(F.text.lower().startswith("starting "))
-async def cmd_starting(message: types.Message):
-    activity_name = message.text[9:].strip()
-    if not activity_name:
-        await message.answer("Starting what? (e.g., 'starting coding')")
-        return
-
-    # Check if there's already an active activity
-    active = await repo.get_active_activity()
-    if active:
-        # If it's the same, ignore or notify
-        if active.name.lower() == activity_name.lower():
-            await message.answer(f"Already tracking '{active.name}'.")
-            return
+@router.message()
+async def handle_message(message: types.Message):
+    try:
+        # 1. Parse intent
+        intent_data = IntentEngine.parse(message.text)
         
-        # If different, treat as 'now'
-        await _switch_activity(message, active, activity_name)
-    else:
-        await repo.start_activity(activity_name)
-        await message.answer(f"⏱️ Tracking **{activity_name}** from {datetime.now().strftime('%H:%M')}")
+        if not intent_data:
+            # Confusion 100 variations
+            await message.answer(PersonalityEngine.get_confused_response(message.text))
+            return
 
-@router.message(F.text.lower().startswith("now "))
-async def cmd_now(message: types.Message):
-    activity_name = message.text[4:].strip()
-    active = await repo.get_active_activity()
-    
-    if active:
-        await _switch_activity(message, active, activity_name)
-    else:
-        await repo.start_activity(activity_name)
-        await message.answer(f"⏱️ Tracking **{activity_name}** from {datetime.now().strftime('%H:%M')}")
+        intent = intent_data["intent"]
 
-@router.message(F.text.lower() == "done")
-async def cmd_done(message: types.Message):
-    active = await repo.get_active_activity()
-    if not active:
-        await message.answer("Nothing is currently being tracked.")
-        return
+        # 2. Handle intents
+        if intent == "start":
+            activity_name = intent_data["activity"]
+            active = await repo.get_active_activity()
+            
+            if active:
+                if active.name.lower() == activity_name.lower():
+                    await message.answer(f"Already tracking '{active.name}', Boss.")
+                    return
+                await _switch_activity(message, active, activity_name)
+            else:
+                await repo.start_activity(activity_name)
+                await message.answer(f"⏱️ Got it! Tracking **{activity_name}** from {format_time()}. Let's kill it!")
 
-    now = datetime.now()
-    duration = ActivityBrain.calculate_duration(active.start_time, now)
-    
-    # Simple context prompt (MVP: just closing it)
-    await repo.end_activity(active.id, now, {})
-    
-    await message.answer(
-        f"✅ Finished **{active.name}**.\n"
-        f"⏱️ Duration: {duration} minutes.\n"
-        f"Want to log a mood or breakthrough? (Or just starting something new?)"
-    )
+        elif intent == "stop":
+            active = await repo.get_active_activity()
+            if not active:
+                await message.answer("Nothing is currently being tracked, Boss.")
+                return
+
+            now = get_now()
+            duration = int((now - active.start_time).total_seconds() / 60)
+            await repo.end_activity(active.id, now, {})
+            
+            response = PersonalityEngine.get_activity_response(active.name, duration)
+            await message.answer(response)
+
+        elif intent == "spent":
+            await repo.add_spending(intent_data["amount"], intent_data["category"])
+            await message.answer(f"💸 Logged: ₦{intent_data['amount']} -> **{intent_data['category']}**. I'm keeping an eye on the bag!")
+
+        elif intent == "time":
+            await message.answer(get_time_query_response())
+
+        elif intent == "summary":
+            await _show_summary(message)
+
+    except Exception as e:
+        # SELF-AWARE ERROR HANDLING
+        import traceback
+        simplified_error = str(e)
+        print(f"[!] INTERNAL ERROR: {traceback.format_exc()}")
+        await message.answer(PersonalityEngine.get_error_response(simplified_error))
 
 async def _switch_activity(message: types.Message, old_activity, new_name: str):
-    now = datetime.now()
-    duration = ActivityBrain.calculate_duration(old_activity.start_time, now)
+    now = get_now()
+    duration = int((now - old_activity.start_time).total_seconds() / 60)
     
     await repo.end_activity(old_activity.id, now, {})
     await repo.start_activity(new_name)
     
-    await message.answer(
-        f"🔄 '{old_activity.name}' was {duration}m.\n"
-        f"⏱️ Now tracking **{new_name}** from {now.strftime('%H:%M')}"
-    )
+    intro = PersonalityEngine.get_activity_response(old_activity.name, duration)
+    await message.answer(f"{intro}\n\n⏱️ **Now tracking {new_name}** from {format_time()}. Keep the momentum!")
 
-@router.message(F.text.lower().startswith("spent "))
-async def cmd_spent(message: types.Message):
-    data = ActivityBrain.parse_spending_input(message.text)
-    if not data:
-        await message.answer("Usage: 'spent 5000 on lunch'")
-        return
-
-    await repo.add_spending(data["amount"], data["category"])
-    await message.answer(f"💸 Logged: ₦{data['amount']} -> **{data['category']}**.")
-
-@router.message(F.text.lower().startswith("summary"))
-@router.message(Command("summary"))
-async def cmd_summary(message: types.Message):
-    now = datetime.now()
+async def _show_summary(message: types.Message):
+    now = get_now()
     activities = await repo.get_daily_activities(now)
     spending = await repo.get_daily_spending(now)
 
     if not activities and not spending:
-        await message.answer("Nothing logged for today yet, Boss.")
+        await message.answer("The vault is empty for today, Boss. Let's start something!")
         return
 
-    text = f"📊 **Daily Report: {now.strftime('%Y-%m-%d')}**\n\n"
+    text = f"📊 **Daily Report: {now.strftime('%Y-%m-%d')} (WAT)**\n\n"
     
     if activities:
         text += "📝 **Activities:**\n"
         for act in activities:
-            duration = "..."
-            if act.end_time:
-                duration = f"{ActivityBrain.calculate_duration(act.start_time, act.end_time)}m"
+            duration = f"{act.duration_minutes}m" if act.duration_minutes is not None else "..."
             text += f"- {act.name}: {duration}\n"
     
     if spending:
