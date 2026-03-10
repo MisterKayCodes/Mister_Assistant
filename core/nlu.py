@@ -20,6 +20,12 @@ class NLUEngine:
     CANCEL_PATTERNS = [
         r"\b(cancel|stop|stop that|nevermind|forget it|don't|no)\b"
     ]
+    
+    SPENDING_PATTERNS = [
+        r"\b(spent|bought|purchased|cost|paid)\b",
+        r"spent\s+(\d+(?:\.\d+)?)\s+on\s+(.+)",
+        r"i\s+spent\s+(\d+(?:\.\d+)?)\s+on\s+(.+)"
+    ]
 
     TIME_PATTERNS = [
         r"what\s+is\s+the\s+time",
@@ -46,6 +52,9 @@ class NLUEngine:
         if any(re.search(p, text) for p in cls.SUMMARY_PATTERNS):
             return "summary"
             
+        if any(re.search(p, text) for p in cls.SPENDING_PATTERNS):
+            return "spent"
+
         if any(re.search(p, text) for p in cls.FUTURE_PATTERNS):
             return "future"
             
@@ -53,7 +62,7 @@ class NLUEngine:
             return "past"
         
         # Verb keywords for activity starts
-        if any(v in text for v in ["now", "start", "starting", "go"]):
+        if any(v in text for v in ["now", "start", "starting", "go", " am ", "i'm", "working"]):
             return "present"
             
         return "none"
@@ -84,17 +93,42 @@ class NLUEngine:
             dt = dateparser.parse(relative_match.group(0), settings=settings)
             cleaned = cleaned.replace(relative_match.group(0), "")
 
-        # Remove intent patterns to isolate activity name
         all_patterns = cls.FUTURE_PATTERNS + cls.PAST_PATTERNS + cls.TIME_PATTERNS + cls.SUMMARY_PATTERNS
         for p in all_patterns:
             cleaned = re.sub(p, "", cleaned)
         
-        cleaned = cleaned.replace("i am", "").replace("i'm", "").replace("i will", "").replace("is it", "").replace("what's", "").replace("whats", "").strip()
-        activity = cleaned if cleaned else "something productive"
+        # Aggressive removal of common filler/stop words for activity identification
+        fillers = [
+            "i am", "i'm", "i will", "is it", "what's", "whats", "i want to", 
+            "i wanna", "wanna", "go to the", "go the", "at the", "plan to",
+            "intend to", "maybe", "later today", "today", "tomorrow"
+        ]
+        for f in fillers:
+            cleaned = cleaned.replace(f, "")
+            
+        activity = cleaned.strip()
+        activity = activity if activity else "something productive"
+
+        # 3. Extract Spending Entities
+        amount = None
+        category = None
+        if re.search(r"\bspent\b", text_lower):
+            # Try to match specific "spent X on Y"
+            spend_match = re.search(r"spent\s+(\d+(?:\.\d+)?)\s+on\s+(.+)", text_lower)
+            if spend_match:
+                amount = float(spend_match.group(1))
+                category = spend_match.group(2).strip().capitalize()
+            else:
+                # Just "spent X"
+                amount_match = re.search(r"spent\s+(\d+(?:\.\d+)?)", text_lower)
+                if amount_match:
+                    amount = float(amount_match.group(1))
 
         return {
             "activity": activity.capitalize(),
-            "target_time": ensure_wat(dt) if dt else None
+            "target_time": ensure_wat(dt) if dt else None,
+            "amount": amount,
+            "category": category
         }
 
     @classmethod
@@ -117,5 +151,7 @@ class NLUEngine:
             "intent": intent,
             "activity": entities["activity"],
             "target_time": entities["target_time"],
+            "amount": entities.get("amount"),
+            "category": entities.get("category"),
             "certainty": certainty
         }

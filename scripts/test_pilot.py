@@ -12,6 +12,7 @@ class TestPilot:
     """Simulates user interactions to test Mister Assistant's Brain."""
 
     TEST_CASES = [
+        ("I want to go to the gym later today", "future"),
         ("What is the time?", "time"),
         ("I am coding", "present"),
         ("I'll exercise at 5pm", "future"),

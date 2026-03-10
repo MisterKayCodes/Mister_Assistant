@@ -12,32 +12,27 @@ from services.scheduler import scheduler
 
 router = Router()
 
-VALID_INTENTS = ["start", "stop", "spent", "time", "summary", "future", "past"]
-
-@router.message(BotStates.waiting_for_teach_intent)
-async def process_teaching(message: types.Message, state: FSMContext):
+@router.message(BotStates.waiting_for_time)
+async def process_time_input(message: types.Message, state: FSMContext):
     data = await state.get_data()
-    phrase = data.get("phrase")
-    text = message.text.lower().strip()
+    activity = data.get("activity", "something productive")
     
-    # Explicit intent check
-    intent = None
-    for valid in VALID_INTENTS:
-        if f"means {valid}" in text or f"is {valid}" in text or text == valid:
-            intent = valid
-            break
+    # Analyze the new message for time
+    analysis = NLUEngine.analyze(message.text)
+    target_time = analysis.get("target_time")
     
-    if not intent:
-        await message.answer(
-            f"🤨 Boss, I need to know the **intent** for '{phrase}'.\n"
-            f"Please say something like: 'means {VALID_INTENTS[0]}' or just '{VALID_INTENTS[1]}'.\n"
-            f"Valid options: {', '.join(VALID_INTENTS)}"
-        )
+    if not target_time:
+        await message.answer(f"Boss, I still don't see a clear time in '{message.text}'. Try something like 'at 5pm' or 'in 20 mins'.")
         return
 
-    await repo.add_custom_mapping(phrase, intent)
-    await state.clear()
-    await message.answer(PersonalityEngine.get_learned_response(phrase, intent))
+    # Transition to confirmation
+    await state.set_state(BotStates.waiting_for_confirmation)
+    await state.update_data(
+        action="schedule",
+        activity=activity,
+        target_time=target_time.isoformat()
+    )
+    await message.answer(f"🤔 Just to be sure, Boss: You want me to schedule **{activity}** for {format_time(target_time)}? (Yes/No)")
 
 @router.message(BotStates.waiting_for_confirmation)
 async def wait_for_confirmation(message: types.Message, state: FSMContext):
@@ -90,62 +85,8 @@ async def handle_message(message: types.Message, state: FSMContext):
             intent = "none"
 
         # 2. Intent Handling
-        if intent == "cancel":
-            num = scheduler.cancel_tasks(message.from_user.id)
-            await state.clear()
-            await message.answer(f"{PersonalityEngine.get_cancel_response()} (Cleared {num} reminders)")
-            return
-
-        if intent == "future":
-            if not target_time:
-                await message.answer("Boss, you said you'll do that... but **when**? I need a time (e.g., 'at 2pm' or 'in 10 mins').")
-                return
-            
-            # Certainty Loop: Ask before scheduling
-            await state.set_state(BotStates.waiting_for_confirmation)
-            await state.update_data(
-                action="schedule",
-                activity=activity,
-                target_time=target_time.isoformat()
-            )
-            await message.answer(f"🤔 Just to be sure, Boss: You want me to schedule **{activity}** for {format_time(target_time)}? (Yes/No)")
-            return
-
-        elif intent == "start" or intent == "present":
-            active = await repo.get_active_activity()
-            if active and active.name.lower() != activity.lower():
-                now = get_now()
-                duration = int((now - active.start_time).total_seconds() / 60)
-                await repo.end_activity(active.id, now, {})
-                await repo.start_activity(activity)
-                intro = PersonalityEngine.get_activity_response(active.name, duration)
-                await message.answer(f"{intro}\n\n⏱️ **Now tracking {activity}** from {format_time()}.")
-            elif not active:
-                await repo.start_activity(activity)
-                await message.answer(f"⏱️ Got it! Tracking **{activity}** from {format_time()}.")
-
-        elif intent == "stop":
-            active = await repo.get_active_activity()
-            if not active:
-                await message.answer("Nothing is currently being tracked, Boss.")
-                return
-            now = get_now()
-            duration = int((now - active.start_time).total_seconds() / 60)
-            await repo.end_activity(active.id, now, {})
-            await message.answer(PersonalityEngine.get_activity_response(active.name, duration))
-
-        elif intent == "past":
-            now = get_now()
-            start_time = now.replace(minute=now.minute - 30)
-            activity_obj = await repo.start_activity(activity)
-            activity_obj.start_time = start_time
-            await repo.end_activity(activity_obj.id, now, {"duration_minutes": 30})
-            await message.answer(f"✅ Logged **{activity}** as a 30m past session. I've got you covered!")
-
         elif intent == "time":
             await message.answer(get_time_query_response())
-        elif intent == "summary":
-            await _show_summary(message)
         elif intent == "present":
             active = await repo.get_active_activity()
             if active and active.name.lower() != activity.lower():
@@ -173,12 +114,3 @@ async def handle_message(message: types.Message, state: FSMContext):
         import traceback
         print(f"[!] Router Error: {traceback.format_exc()}")
         await message.answer(PersonalityEngine.get_error_response(str(e)))
-
-async def _show_summary(message: types.Message):
-    now = get_now()
-    activities = await repo.get_daily_activities(now)
-    text = f"📊 **Daily Report: {format_time(now)} (WAT)**\n\n"
-    for act in activities:
-        duration = f"{act.duration_minutes}m" if act.duration_minutes is not None else "..."
-        text += f"- {act.name}: {duration}\n"
-    await message.answer(text)

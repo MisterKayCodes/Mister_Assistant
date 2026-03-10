@@ -15,10 +15,12 @@ async def test_brain_logic():
     is_flow = ActivityBrain.is_flow_session(duration, 0)
     assert is_flow is True
     
-    spend = ActivityBrain.parse_spending_input("spent 4500 on palm oil")
-    assert spend["amount"] == 4500.0
-    assert spend["category"] == "palm" # wait, regex might need tuning
-    print("✅ Brain logic tests passed!")
+    from core.nlu import NLUEngine
+    analysis = NLUEngine.analyze("spent 4500 on palm oil")
+    assert analysis["intent"] == "spent"
+    assert analysis["amount"] == 4500.0
+    assert analysis["category"] == "Palm oil"
+    print("✅ NLUEngine spending tests passed!")
 
 async def test_repo_interaction():
     print("🧪 Testing Repository interactions...")

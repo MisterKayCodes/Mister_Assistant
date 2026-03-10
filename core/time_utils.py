@@ -11,7 +11,7 @@ def format_time(dt: datetime = None):
     """Formats time for human consumption."""
     if dt is None:
         dt = get_now()
-    return dt.strftime("%H:%M")
+    return dt.strftime("%I:%M %p")
 
 def format_date(dt: datetime = None):
     """Formats date for human consumption."""

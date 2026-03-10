@@ -7,7 +7,7 @@ from aiogram.client.default import DefaultBotProperties
 
 from config import settings
 from bot.guard import SmartGuardMiddleware
-from bot.routers import auth, activities
+from bot.routers import auth, activities, spending, teaching, reports, history
 
 # Logging configuration
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
@@ -26,6 +26,10 @@ async def main():
     # Register Routers
     dp.include_router(auth.router)
     dp.include_router(activities.router)
+    dp.include_router(spending.router)
+    dp.include_router(teaching.router)
+    dp.include_router(reports.router)
+    dp.include_router(history.router)
 
     # Start polling
     logging.info("🤖 Mister Assistant is waking up...")

@@ -4,3 +4,6 @@ class BotStates(StatesGroup):
     waiting_for_confirmation = State()
     waiting_for_future_start = State()
     waiting_for_teach_intent = State()
+    waiting_for_time = State()
+    waiting_for_spending_amount = State()
+    waiting_for_spending_category = State()
