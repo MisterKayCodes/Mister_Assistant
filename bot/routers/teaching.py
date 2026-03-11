@@ -4,13 +4,13 @@ from bot.states import BotStates
 from data.repository import repo
 from core.personality import PersonalityEngine
 
-from core.nlu import NLUEngine
+from services.nlu_service import nlu_service
 
 router = Router()
 
 VALID_INTENTS = ["start", "stop", "spent", "time", "summary", "future", "past"]
 
-@router.message(lambda message: NLUEngine.analyze(message.text)["intent"] == "none")
+@router.message(lambda message: nlu_service.analyze(message.text).confidence < 0.6)
 async def handle_unknown(message: types.Message, state: FSMContext):
     await state.set_state(BotStates.waiting_for_teach_intent)
     await state.update_data(phrase=message.text)

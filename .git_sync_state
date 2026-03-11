@@ -1,1 +1,1 @@
-feat: implement WAT support, personality engine, and watcher optimization
+feat: upgraded NLU with local ML classifier, spaCy extraction, and active learning

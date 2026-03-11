@@ -43,7 +43,7 @@ def check_file_integrity(file_path, folder_name, forbidden_rules, max_lines=200)
             
             for name in names:
                 for f in forbidden:
-                    if name.startswith(f):
+                    if name == f or name.startswith(f + "."):
                         errors.append(f"Illegal import: {name}")
     
     return errors

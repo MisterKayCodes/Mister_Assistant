@@ -5,7 +5,7 @@ import os
 # Mocking and path setup
 sys.path.append(os.getcwd())
 
-from core.nlu import NLUEngine
+from services.nlu_service import nlu_service
 from data.repository import repo
 
 class TestPilot:
@@ -38,8 +38,16 @@ class TestPilot:
             custom = await repo.get_custom_intent(phrase)
             
             # 2. Run NLU
-            analysis = NLUEngine.analyze(phrase)
-            actual_intent = custom if custom else analysis["intent"]
+            analysis = nlu_service.analyze(phrase)
+            
+            # Map legacy intent strings returned by fallback to new ML ones for testing purposes if needed
+            ai_intent = analysis.intent
+            if ai_intent == "log_spending": ai_intent = "spent"
+            if ai_intent == "get_summary": ai_intent = "summary"
+            if ai_intent == "start_activity": ai_intent = "present"
+            if ai_intent == "end_activity": ai_intent = "past"
+            
+            actual_intent = custom if custom else ai_intent
             
             status = "PASS" if actual_intent == expected_intent else "FAIL"
             if status == "✅ PASS": passed += 1

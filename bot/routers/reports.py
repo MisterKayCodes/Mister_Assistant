@@ -2,11 +2,11 @@ from aiogram import Router, types
 from core.time_utils import get_now, format_time
 from data.repository import repo
 
-from core.nlu import NLUEngine
+from services.nlu_service import nlu_service
 
 router = Router()
 
-@router.message(lambda message: NLUEngine.analyze(message.text)["intent"] == "summary")
+@router.message(lambda message: nlu_service.analyze(message.text).intent == "get_summary")
 async def cmd_summary(message: types.Message):
     await show_summary(message)
 

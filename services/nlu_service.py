@@ -3,7 +3,7 @@ from core.nlu.parser import GrammarParser
 from core.models.nlu_structures import ParsedCommand
 from loguru import logger
 
-from core.nlu import NLUEngine as OldRulesEngine
+from core.nlu.legacy import NLUEngine as OldRulesEngine
 
 class NLUService:
     _instance = None
