@@ -12,6 +12,7 @@
 | **Git Automation** | ✅ Integrated | 2026-03-10 | 2026-03-10 | `feat: implement integrated watcher-based git sync` |
 | **Humanize & Harden**| ✅ Done | 2026-03-10 | 2026-03-10 | `feat: implement WAT support, personality engine, and watcher optimization` |
 | **NLU Tri-Core**| ✅ Done | 2026-03-10 | 2026-03-10 | `feat: upgraded NLU with local ML classifier, spaCy extraction, and active learning` |
+| **Code Healer**| ✅ Done | 2026-03-11 | 2026-03-11 | `feat: implement AST-based anomaly detector and auto-healing script` |
 
 
 

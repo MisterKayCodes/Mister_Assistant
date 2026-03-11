@@ -10,3 +10,5 @@
 {"text": "Random gibberish", "predicted_intent": "idle_chat", "confidence": 0.5190926856237552}
 {"text": "Remind me to gym in 10 minutes", "predicted_intent": "transition_activity", "confidence": 0.5417456279449767}
 {"text": "Remind me to gym in 10 mins", "predicted_intent": "transition_activity", "confidence": 0.5417456279449767}
+{"text": "Waking up", "predicted_intent": "idle_chat", "confidence": 0.6765975938341113}
+{"text": "Waking up", "predicted_intent": "idle_chat", "confidence": 0.6765975938341113}

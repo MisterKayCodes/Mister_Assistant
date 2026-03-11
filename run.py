@@ -5,6 +5,7 @@ import threading
 import re
 import hashlib
 from scripts.architecture_inspector import scan_organism
+from scripts.code_healer import run_healer
 from scripts.git_sync import sync
 
 def get_req_hash():
@@ -91,11 +92,20 @@ def start_bot():
         from watchfiles import run_process
         run_process("./", target=f"{sys.executable} main.py")
 
+def run_healer_step():
+    print("[...] Running Code Healer...")
+    try:
+        run_healer()
+    except Exception as e:
+        print(f"[!] Code Healer Error: {e}")
+
 if __name__ == "__main__":
     if not check_dependencies():
         print("[!] Boot aborted: Dependency installation failed.")
         sys.exit(1)
         
+    run_healer_step()
+    
     if run_inspector():
         start_bot()
     else:
